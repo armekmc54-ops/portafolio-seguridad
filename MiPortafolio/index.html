@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | CNO V - Seguridad Informática</title>
+    <!-- Tailwind CSS para diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para iconos bonitos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+
+    <!-- 1. ENCABEZADO (Header) - PF01.1 -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="text-lg font-bold text-blue-700 leading-none">Jose Armando Palomo Cerda 175932</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">CNO V – Seguridad Informática</span>
+            </div>
+            <!-- Menú de navegación -->
+            <div class="hidden md:flex space-x-8 font-medium text-sm">
+                <a href="#inicio" class="hover:text-blue-600 transition">Inicio</a>
+                <a href="#perfil" class="hover:text-blue-600 transition">Perfil</a>
+                <a href="#evidencias" class="hover:text-blue-600 transition">Evidencias</a>
+                <a href="#contacto" class="hover:text-blue-600 transition font-bold text-blue-600">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. PRESENTACIÓN DEL PORTAFOLIO - PF01.2 -->
+    <header id="inicio" class="pt-32 pb-20 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>Portafolio Técnico Digital</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight">
+                Análisis de Seguridad y Pruebas de Penetración
+            </h1>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-4 text-slate-600">
+                    <p>
+                        <strong>Propósito:</strong> Este portafolio funciona como la bitácora técnica de aprendizaje, donde se recopilan las evidencias teóricas y prácticas desarrolladas durante el curso.
+                    </p>
+                    <p>
+                        <strong>Enfoque:</strong> El curso se centra en la seguridad informática, cubriendo el análisis de vulnerabilidades, auditorías de sistemas y estrategias de defensa proactiva.
+                    </p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                    <p class="text-sm text-slate-600 italic">
+                        "La importancia de este portafolio radica en la capacidad de demostrar el progreso continuo en la resolución de problemas complejos de seguridad y el dominio de herramientas de ciberseguridad."
+                    </p>
+                    <div class="mt-4 flex flex-col space-y-2 text-xs font-bold text-slate-500">
+                        <span>Univrsidad Politécnica de San Luis Potosí</span>
+                        <span>Semestre 9+ 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PERFIL DEL ESTUDIANTE - PF01.3 -->
+    <section id="perfil" class="py-20 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center space-x-4 mb-10">
+                <div class="h-10 w-2 bg-blue-600 rounded-full"></div>
+                <h2 class="text-3xl font-bold">Perfil del Estudiante</h2>
+            </div>
+            
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 md:flex gap-10 items-start">
+                <div class="w-40 h-40 bg-slate-200 rounded-2xl mb-6 md:mb-0 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                    <!-- Placeholder para tu foto -->
+                    <i data-lucide="assets/img/yo.jpg" class="w-16 h-16 text-slate-400"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Semblanza Académica</h3>
+                    <p class="text-slate-600 mb-6">
+                        Soy estudiante de Ingeniería en Tecnologías de la Información, apasionado por la infraestructura tecnológica dieseño web y la protección de datos. Me enfoco en comprender cómo los sistemas pueden ser vulnerados para construir defensas más robustas.
+                    </p>
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3 tracking-widest">Intereses en Ciberseguridad</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Seguridad Informática</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Investigación</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Pentesting</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold">Criptografía</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INFORMACIÓN TÉCNICA BÁSICA - PF01.4 -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-8">Ficha Técnica del Sitio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl border border-slate-100 hover:border-blue-200 transition">
+                    <i data-lucide="code" class="text-blue-600 mb-4"></i>
+                    <h4 class="font-bold text-sm mb-1">Tecnologías</h4>
+                    <p class="text-xs text-slate-500">HTML5, Tailwind CSS, JavaScript.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-100 hover:border-blue-200 transition">
+                    <i data-lucide="globe" class="text-blue-600 mb-4"></i>
+                    <h4 class="font-bold text-sm mb-1">Publicación</h4>
+                    <p class="text-xs text-slate-500">Hospedado en GitHub Pages (HTTPS/SSL).</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-100 hover:border-blue-200 transition">
+                    <i data-lucide="git-branch" class="text-blue-600 mb-4"></i>
+                    <h4 class="font-bold text-sm mb-1">Control de Versiones</h4>
+                    <p class="text-xs text-slate-500">Gestión de cambios mediante Git.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE EVIDENCIAS (PARCIALES) -->
+    <section id="evidencias" class="py-20 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-400 italic">EVIDENCIAS POR PARCIAL</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Parcial 1 -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold border-b-2 border-blue-600 pb-2 inline-block">Parcial 1</h3>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                        <h4 class="font-bold text-slate-800">Tarea 1: Glosario de Términos</h4>
+                        <p class="text-xs text-slate-500 mt-2 mb-4">Conceptos fundamentales de amenazas y vectores de ataque.</p>
+                        <a href="Parciales/Parcial1/glosario.pdf" target="_blank" class="text-blue-600 text-xs font-bold flex items-center">
+                            Ver Documento <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parcial 2 -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold border-b-2 border-slate-300 pb-2 inline-block text-slate-400">Parcial 2</h3>
+                    <div class="p-10 border-2 border-dashed border-slate-200 rounded-2xl flex items-center justify-center">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-300">Pendiente</span>
+                    </div>
+                </div>
+
+                <!-- Parcial 3 -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold border-b-2 border-slate-300 pb-2 inline-block text-slate-400">Parcial 3</h3>
+                    <div class="p-10 border-2 border-dashed border-slate-200 rounded-2xl flex items-center justify-center">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-300">Pendiente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FORMULARIO DE CONTACTO - PF01.5 -->
+    <section id="contacto" class="py-20 px-6 bg-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+            <p class="text-slate-500 mb-10 text-sm">¿Tienes alguna duda técnica? Envíame un mensaje.</p>
+            
+            <form class="text-left space-y-4 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-slate-400 ml-1">Nombre</label>
+                        <input type="text" placeholder="Ingresa tu nombre" class="w-full p-3 rounded-xl border-slate-200 border outline-none focus:border-blue-500 text-sm transition">
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-slate-400 ml-1">Correo Electrónico</label>
+                        <input type="email" placeholder="ejemplo@correo.com" class="w-full p-3 rounded-xl border-slate-200 border outline-none focus:border-blue-500 text-sm transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-slate-400 ml-1">Mensaje</label>
+                    <textarea rows="4" placeholder="Escribe tu mensaje..." class="w-full p-3 rounded-xl border-slate-200 border outline-none focus:border-blue-500 text-sm transition"></textarea>
+                </div>
+                <button type="button" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition flex items-center justify-center space-x-2">
+                    <span>Enviar consulta</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. PIE DE PÁGINA (Footer) - PF01.6 -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i data-lucide="github"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:
