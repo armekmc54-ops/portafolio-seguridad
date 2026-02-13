@@ -671,40 +671,8 @@
     });
 </script>
 
-        function showView(view, sectionId = null) {
-            const home = document.getElementById('main-content');
-            const detail = document.getElementById('activity-detail');
-            if (view === 'home') {
-                home.classList.remove('hidden');
-                detail.classList.add('hidden');
-                if (sectionId) {
-                    const el = document.getElementById(sectionId);
-                    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
-                }
-            } else {
-                home.classList.add('hidden');
-                detail.classList.remove('hidden');
-                window.scrollTo(0, 0);
-            }
-        }
-
-        function viewActivity(id) {
-            const data = activities[id] || { title: "Próximamente", date: "-", content: "<p class='italic text-slate-400 text-center'>Artículo en redacción técnica.</p>" };
-            const container = document.getElementById('activity-content');
-            container.innerHTML = `
-                <div class="mb-12">
-                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full mb-4">Actividad ${id.toString().padStart(2, '0')}</span>
-                    <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-none mb-4 tracking-tighter">${data.title}</h1>
-                    <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Fecha de Entrega: ${data.date}</p>
-                </div>
-                <div class="border-t border-slate-100 pt-10">${data.content}</div>
-            `;
-            showView('detail');
-            lucide.createIcons();
-        }
-        lucide.createIcons();
-    </script>
 </body>
 </html>
+
 
 
