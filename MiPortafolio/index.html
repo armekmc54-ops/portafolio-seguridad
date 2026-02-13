@@ -187,345 +187,235 @@
     </footer>
 
     <script>
-        const activities = {
-            1: {
-                title: "Actividad 01: Análisis en grupo de un ciberataque real y su impacto empresarial",
-                date: "30 de Enero de 2026",
-                content: `
-                    <div class="space-y-12">
-                        <!-- Portada / Intro -->
-                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 text-center space-y-4">
-                            <h3 class="text-sm font-black uppercase text-blue-700 tracking-tighter">Reporte Técnico de Equipo</h3>
-                            <h2 class="text-3xl font-black text-slate-900 leading-none mb-6">ANÁLISIS DE CASO: EQUIFAX 2017</h2>
-                            <div class="text-xs font-bold text-slate-500 space-y-1">
-                                <p>Jasso Dávila Pedro Damián - 176658</p>
-                                <p>Moreno Solís Gisela Geraldine - 176522</p>
-                                <p>Palomo Cerdá José Armando - 175932</p>
-                                <p>Zarate Domínguez David - 175842</p>
-                                <p>Zorrilla Rivera Eduardo - 175877</p>
-                                <div class="w-12 h-0.5 bg-blue-600 mx-auto my-4"></div>
-                                <p class="text-blue-600">Mtro. Servando López Contreras</p>
-                                <p>UPSLP - CNO V Seguridad Informática</p>
-                            </div>
+    const activities = {
+        1: {
+            title: "Actividad 01: Análisis en grupo de un ciberataque real y su impacto empresarial",
+            date: "30 de Enero de 2026",
+            content: `
+                <div class="space-y-12">
+                    <!-- PORTADA / IDENTIFICACIÓN -->
+                    <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 text-center space-y-4">
+                        <h3 class="text-sm font-black uppercase text-blue-700 tracking-widest">ACTIVIDAD 01</h3>
+                        <h2 class="text-3xl font-black text-slate-900 leading-none">ANÁLISIS EN GRUPO DE UN CIBERATAQUE REAL Y SU IMPACTO EMPRESARIAL</h2>
+                        <div class="w-16 h-1 bg-blue-600 mx-auto my-6"></div>
+                        <div class="grid md:grid-cols-2 gap-4 text-xs font-bold text-slate-600 text-left max-w-2xl mx-auto">
+                            <p>• Jasso Dávila Pedro Damián - 176658</p>
+                            <p>• Moreno Solís Gisela Geraldine - 176522</p>
+                            <p>• Palomo Cerdá José Armando - 175932</p>
+                            <p>• Zarate Domínguez David - 175842</p>
+                            <p>• Zorrilla Rivera Eduardo - 175877</p>
                         </div>
-
-                        <div class="space-y-6">
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Introducción</h2>
-                            <p>El presente reporte documenta el ciberataque sufrido por <strong>Equifax en 2017</strong>, considerado uno de los incidentes de ex-filtración masiva más graves en el sector financiero. El ataque fue posible mediante la explotación de la vulnerabilidad <strong>CVE-2017-5638 en Apache Struts</strong>, la cual permitió la ejecución remota de código (RCE) debido a la omisión de un parche de seguridad disponible meses antes del incidente.</p>
-                            <p>La brecha expuso deficiencias críticas en la gestión de activos y la visibilidad operativa, destacando el vencimiento de certificados SSL que impidieron la detección del tráfico malicioso durante 76 días. Con un impacto que afectó a 147.5 millones de víctimas y resultó en un acuerdo judicial de $1.4 mil millones de USD.</p>
+                        <div class="pt-6 text-xs font-bold text-slate-400 border-t border-slate-200 mt-6">
+                            <p class="uppercase">Mtro. Servando López Contreras</p>
+                            <p>UPSLP | CNO V Seguridad Informática</p>
                         </div>
+                    </div>
 
-                        <!-- Línea de Tiempo -->
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Cronología Detallada (Expediente EQX-2017)</h2>
-                            <div class="overflow-x-auto">
-                                <table class="content-table">
-                                    <thead>
-                                        <tr><th>Fecha</th><th>Hora</th><th>Evento</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td>07 Mar 2017</td><td>10:00</td><td>DHS emite alerta crítica sobre la vulnerabilidad CVE-2017-5638.</td></tr>
-                                        <tr><td>08 Mar 2017</td><td>09:00</td><td>Equifax clasifica el riesgo como "Inminente y Crítico".</td></tr>
-                                        <tr><td>10 Mar 2017</td><td>17:00</td><td><b>Fallo operativo:</b> El escaneo no identifica el portal de disputas como vulnerable.</td></tr>
-                                        <tr><td>13 May 2017</td><td>21:15</td><td><b>Intrusión inicial:</b> Se registra el primer comando RCE exitoso.</td></tr>
-                                        <tr><td>15 May 2017</td><td>11:20</td><td>Atacantes localizan un archivo con credenciales de DB en <b>texto plano</b>.</td></tr>
-                                        <tr><td>01 Jun 2017</td><td>00:00</td><td>Comienza extracción masiva: 5 millones de registros por día.</td></tr>
-                                        <tr><td>29 Jul 2017</td><td>10:15</td><td><b>Detección:</b> Se identifica tráfico hacia IP externa no autorizada.</td></tr>
-                                        <tr><td>29 Jul 2017</td><td>11:30</td><td>Se descubre que el certificado SSL de monitoreo venció en Septiembre de 2016.</td></tr>
-                                        <tr><td>02 Ago 2017</td><td>12:00</td><td>Análisis forense confirma exfiltración masiva. 130 millones de víctimas iniciales.</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <!-- INTRODUCCIÓN -->
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Introducción</h2>
+                        <p>El presente reporte documenta el ciberataque sufrido por <strong>Equifax en 2017</strong>, considerado uno de los incidentes de ex-filtración masiva más graves en el sector financiero. El ataque fue posible mediante la explotación de la vulnerabilidad <strong>CVE-2017-5638 en Apache Struts</strong>, la cual permitió la ejecución remota de código (RCE) debido a la omisión de un parche de seguridad disponible meses antes del incidente.</p>
+                        <p>La brecha expuso deficiencias críticas en la gestión de activos y la visibilidad operativa, destacando el vencimiento de certificados SSL que impidieron la detección del tráfico malicioso durante 76 días. Este estudio evalúa las consecuencias bajo el <strong>modelo CIA</strong> (Confidencialidad, Integridad y Disponibilidad).</p>
+                    </div>
 
-                        <!-- Análisis Técnico -->
-                        <div class="space-y-6">
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Análisis Técnico y Estratégico</h2>
-                            <ul class="space-y-4">
-                                <li class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                    <h4 class="font-bold text-blue-800 mb-2">Omisión de Mantenimiento Crítico</h4>
-                                    <p class="text-sm">La incapacidad de Equifax para identificar qué servidores corrían Apache Struts demuestra una falta grave de inventario de activos (ISO 27001).</p>
-                                </li>
-                                <li class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                    <h4 class="font-bold text-blue-800 mb-2">Falla de Visibilidad Operativa</h4>
-                                    <p class="text-sm">Tener un certificado SSL vencido por 10 meses es equivalente a tener cámaras en un banco pero el monitor desconectado.</p>
-                                </li>
-                                <li class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                                    <h4 class="font-bold text-blue-800 mb-2">Higiene de Datos Deficiente</h4>
-                                    <p class="text-sm">El hallazgo de credenciales en texto plano eliminó la necesidad de ataques complejos una vez superado el perímetro.</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Tablas de Costo y CIA -->
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Impacto del Ciberataque</h2>
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div class="overflow-x-auto">
-                                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-2">Evaluación CIA</h4>
-                                    <table class="content-table">
-                                        <thead><tr><th>Principio</th><th>Evidencia</th></tr></thead>
-                                        <tbody>
-                                            <tr><td>Confidencialidad</td><td>Robo de SSN y tarjetas de 147.5M de personas.</td></tr>
-                                            <tr><td>Integridad</td><td>Ejecución de "queries" de prueba en DB crediticias.</td></tr>
-                                            <tr><td>Disponibilidad</td><td>Bloqueo total del portal de disputas el 29 de Julio.</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="overflow-x-auto">
-                                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-2">Costos Totales (Estimado MXN)</h4>
-                                    <table class="content-table">
-                                        <thead><tr><th>Concepto</th><th>Monto</th></tr></thead>
-                                        <tbody>
-                                            <tr><td>Pérdidas Operativas</td><td>$1,665,000,000</td></tr>
-                                            <tr><td>Daños Reputacionales</td><td>$74,000,000,000</td></tr>
-                                            <tr><td>Costos Técnicos</td><td>$18,500,000,000</td></tr>
-                                            <tr class="font-bold text-blue-700"><td>TOTAL</td><td>$107,115,000,000</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Marcos Normativos -->
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Relación con Marcos Normativos</h2>
+                    <!-- LÍNEA DE TIEMPO EXTENSA -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Línea de Tiempo: Expediente EQX-2017</h2>
+                        <div class="overflow-x-auto">
                             <table class="content-table">
-                                <thead><tr><th>Marco</th><th>Control/Fallo</th><th>Acción Preventiva</th></tr></thead>
+                                <thead>
+                                    <tr><th>Fecha / Hora</th><th>Evento y Descripción Técnica</th></tr>
+                                </thead>
                                 <tbody>
-                                    <tr><td>ISO 27001</td><td>Gestión de vulnerabilidades técnicas.</td><td>Parchado en las 48 horas posteriores a la alerta.</td></tr>
-                                    <tr><td>NIST CSF</td><td>Monitoreo continuo (DE.CM-1).</td><td>Renovación automática de certificados SSL para visibilidad.</td></tr>
-                                    <tr><td>GDPR</td><td>Seguridad del tratamiento (Art. 32).</td><td>Cifrado de datos en reposo y seudonimización.</td></tr>
+                                    <tr><td><b>07 Mar 2017</b><br>10:00 hrs</td><td>El DHS emite alerta crítica sobre CVE-2017-5638 en Apache Struts.</td></tr>
+                                    <tr><td><b>08 Mar 2017</b><br>09:00 hrs</td><td>Equifax clasifica el riesgo como "Inminente y Crítico".</td></tr>
+                                    <tr><td><b>10 Mar 2017</b><br>17:00 hrs</td><td><b>Fallo operativo:</b> El escaneo automatizado no identifica el portal de disputas debido a una configuración de red errónea.</td></tr>
+                                    <tr><td><b>12 Mar 2017</b><br>00:00 hrs</td><td>Vence plazo para parcheo. El servidor crítico queda expuesto en puerto 443.</td></tr>
+                                    <tr><td><b>13 May 2017</b><br>21:15 hrs</td><td><b>Intrusión Inicial:</b> Actores de amenaza ejecutan el primer comando RCE exitoso.</td></tr>
+                                    <tr><td><b>13 May 2017</b><br>23:50 hrs</td><td>Instalación de <b>Web Shell</b> para asegurar persistencia.</td></tr>
+                                    <tr><td><b>15 May 2017</b><br>11:20 hrs</td><td>Hallazgo crítico: Atacantes localizan credenciales de DB en <b>texto plano</b>.</td></tr>
+                                    <tr><td><b>25 May 2017</b><br>09:00 hrs</td><td>Se establece canal de exfiltración cifrado (no detectado por SSL vencido).</td></tr>
+                                    <tr><td><b>01 Jun 2017</b><br>00:00 hrs</td><td>Comienza extracción masiva de PII (5 millones de registros por día).</td></tr>
+                                    <tr><td><b>20 Jun 2017</b><br>18:00 hrs</td><td>Volumen de datos exfiltrados supera los <b>200 GB</b>.</td></tr>
+                                    <tr><td><b>29 Jul 2017</b><br>10:15 hrs</td><td><b>Detección:</b> Se identifica tráfico sospechoso hacia IP externa no autorizada.</td></tr>
+                                    <tr><td><b>29 Jul 2017</b><br>11:30 hrs</td><td>Se descubre que el certificado SSL de monitoreo venció en <b>Septiembre de 2016</b>.</td></tr>
+                                    <tr><td><b>30 Jul 2017</b><br>09:00 hrs</td><td>Se activa Protocolo de Respuesta a Incidentes y se contrata a <b>Mandiant</b>.</td></tr>
+                                    <tr><td><b>24 Ago 2017</b><br>10:00 hrs</td><td>Tres altos ejecutivos venden acciones por $1.8 millones antes del anuncio público.</td></tr>
                                 </tbody>
                             </table>
                         </div>
+                    </div>
 
-                        <!-- Conclusiones -->
-                        <div class="bg-slate-900 text-white p-10 rounded-[2.5rem]">
-                            <h2 class="text-2xl font-bold mb-6 text-blue-400">Conclusiones y Recomendaciones</h2>
-                            <div class="grid md:grid-cols-2 gap-8 text-sm leading-relaxed">
-                                <div class="space-y-4">
-                                    <p>• La visibilidad es la base de la protección: No se puede proteger lo que no se sabe que existe.</p>
-                                    <p>• Un parche omitido es una puerta abierta: La velocidad de respuesta es tan vital como la detección.</p>
-                                </div>
-                                <div class="space-y-4">
-                                    <p>• Implementar Inventario de Activos Dinámico: Registro automatizado para eliminar puntos ciegos.</p>
-                                    <p>• Adoptar Privilegio Mínimo: Prohibir estrictamente el almacenamiento de contraseñas en texto plano.</p>
-                                </div>
+                    <!-- ANÁLISIS TÉCNICO -->
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Análisis Técnico y Estratégico</h2>
+                        <div class="grid md:grid-cols-3 gap-6 text-sm">
+                            <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                                <h4 class="font-black text-red-700 mb-2">Omisión de Mantenimiento</h4>
+                                <p class="text-slate-600">Incapacidad de identificar servidores vulnerables. Violación de inventario de activos bajo ISO 27001.</p>
+                            </div>
+                            <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                                <h4 class="font-black text-red-700 mb-2">Falla de Visibilidad</h4>
+                                <p class="text-slate-600">Certificado SSL vencido por 10 meses. Equivalente a tener cámaras sin monitor conectado.</p>
+                            </div>
+                            <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                                <h4 class="font-black text-red-700 mb-2">Higiene de Datos</h4>
+                                <p class="text-slate-600">Credenciales en texto plano eliminaron la necesidad de ataques de fuerza bruta complejos.</p>
                             </div>
                         </div>
                     </div>
-                `
-            },
-            2: {
-                title: "Actividad 02: Análisis de servicios de seguridad (X.800 y RFC 4949)",
-                date: "27 de Enero de 2026",
-                content: `
-                    <div class="space-y-12">
-                        <!-- Portada Técnica -->
-                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 text-center space-y-4">
-                            <h3 class="text-sm font-black uppercase text-blue-700 tracking-tighter">Reporte Individual de Análisis</h3>
-                            <h2 class="text-3xl font-black text-slate-900 leading-none mb-6 underline decoration-blue-600">ANÁLISIS DE SERVICIOS DE SEGURIDAD</h2>
-                            <div class="text-xs font-bold text-slate-500 space-y-1">
-                                <p>PALOMO CERDA JOSE ARMANDO - 175932</p>
-                                <p class="text-blue-600">MSTRO. SERVANDO LOPEZ CUEVAS</p>
-                                <p>Universidad Politécnica de San Luis Potosí</p>
-                                <p>CNO V - SEGURIDAD INFORMÁTICA</p>
+
+                    <!-- TABLA TÉCNICA DEL ATAQUE -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Ficha Técnica del Ataque</h2>
+                        <table class="content-table">
+                            <thead><tr><th>Elemento</th><th>Descripción</th></tr></thead>
+                            <tbody>
+                                <tr><td><b>Tipo de Ataque</b></td><td>Explotación de RCE y exfiltración masiva de datos.</td></tr>
+                                <tr><td><b>Actor</b></td><td>Vinculado a infraestructuras de inteligencia extranjera.</td></tr>
+                                <tr><td><b>Vulnerabilidad</b></td><td>CVE-2017-5638 en Apache Struts (Gravedad 10.0).</td></tr>
+                                <tr><td><b>Etapas (MITRE)</b></td><td>1. Intrusión, 2. Persistencia, 3. Reconocimiento, 4. Movimiento Lateral, 5. Exfiltración.</td></tr>
+                                <tr><td><b>Sistemas</b></td><td>Servidor portal de disputas y bases de datos centrales de crédito.</td></tr>
+                                <tr><td><b>Duración</b></td><td>76 días de actividad maliciosa activa.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- EVALUACIÓN CIA -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Evaluación del Impacto (Modelo CIA)</h2>
+                        <table class="content-table">
+                            <thead><tr><th>Principio</th><th>Descripción</th><th>Evidencia del Caso</th></tr></thead>
+                            <tbody>
+                                <tr><td><b>Confidencialidad</b></td><td>Información expuesta/robada.</td><td>Robo de registros de 147.5M de personas (SSN, fechas, tarjetas).</td></tr>
+                                <tr><td><b>Integridad</b></td><td>Datos o sistemas alterados.</td><td>Credenciales en texto plano y ejecución de queries de prueba en DB.</td></tr>
+                                <tr><td><b>Disponibilidad</b></td><td>Servicios interrumpidos.</td><td>Bloqueo del portal de disputas y caída del sitio de ayuda por saturación.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- ANÁLISIS ECONÓMICO -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Cálculo del Costo Total (MXN)</h2>
+                        <p class="text-xs text-slate-400 mb-4">*Tipo de cambio 2017: $18.50 MXN por 1 USD</p>
+                        <table class="content-table text-right">
+                            <thead>
+                                <tr><th class="text-left">Tipo de Costo</th><th class="text-left">Descripción</th><th>Estimación (MXN)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="text-left"><b>Operativas</b></td><td class="text-left">Interrupción y horas hombre en contención.</td><td>$1,665,000,000</td></tr>
+                                <tr><td class="text-left"><b>Reputacionales</b></td><td class="text-left">Pérdida de confianza y caída del valor de acciones.</td><td>$74,000,000,000</td></tr>
+                                <tr><td class="text-left"><b>Técnicos</b></td><td class="text-left">Investigación forense y renovación de infra.</td><td>$18,500,000,000</td></tr>
+                                <tr><td class="text-left"><b>Legales</b></td><td class="text-left">Acuerdo judicial con FTC y demandas.</td><td>$12,950,000,000</td></tr>
+                                <tr class="font-black text-blue-700"><td colspan="2" class="text-left uppercase">Total Estimado</td><td>$107,115,000,000 MXN</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- MARCOS NORMATIVOS -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4 mb-6">Relación con Marcos Normativos</h2>
+                        <table class="content-table">
+                            <thead><tr><th>Marco</th><th>Fallo en Equifax</th><th>Acción Preventiva</th></tr></thead>
+                            <tbody>
+                                <tr><td><b>ISO 27001</b></td><td>A.12.6.1 Gestión de vulnerabilidades e inventario deficiente.</td><td>Un inventario actualizado habría evitado puntos ciegos en el portal de disputas.</td></tr>
+                                <tr><td><b>NIST CSF</b></td><td>DE.CM-1 (Detección): Tráfico no detectado por SSL vencido.</td><td>Detección de firmas de Web Shells en horas, no en meses.</td></tr>
+                                <tr><td><b>GDPR</b></td><td>Art. 32: Falta de seudonimización y cifrado apropiado.</td><td>Cifrado en reposo (Data at Rest) habría hecho los datos inútiles para el atacante.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- CONCLUSIONES -->
+                    <div class="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl">
+                        <h2 class="text-2xl font-bold mb-6 text-blue-400">Conclusiones y Aprendizajes Clave</h2>
+                        <div class="grid md:grid-cols-2 gap-10 text-sm leading-relaxed text-slate-300">
+                            <div class="space-y-4">
+                                <p>• <strong>Visibilidad es protección:</strong> No se puede proteger lo que no se sabe que existe. El desconocimiento del software expuesto fue la brecha crítica.</p>
+                                <p>• <strong>Velocidad de Respuesta:</strong> Un parche omitido desde marzo subraya que la velocidad es tan vital como la detección misma.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <p>• <strong>Inventario Dinámico:</strong> Es obligatorio mantener un registro automatizado de versiones de software para eliminar puntos ciegos operativos.</p>
+                                <p>• <strong>Privilegio Mínimo:</strong> Se debe prohibir estrictamente el almacenamiento de contraseñas en texto plano para evitar movimientos laterales.</p>
                             </div>
                         </div>
-
-                        <div class="space-y-6">
-                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Introducción</h2>
-                            <p>En el panorama actual de la ciberseguridad, la sofisticación de las amenazas exige el uso de un lenguaje técnico estandarizado y marcos de referencia robustos. Esta actividad se centra en la aplicación de dos pilares fundamentales: el modelo <strong>ITU-T X.800</strong> y el <strong>RFC 4949</strong>.</p>
-                            <p>A través del análisis de diez escenarios distintos, este trabajo demuestra cómo el uso correcto de esta terminología facilita la identificación de vectores de ataque y la implementación de controles de seguridad efectivos, protegiendo los activos más valiosos de cualquier organización: su información y su continuidad operativa.</p>
-                        </div>
-
-                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Análisis de Escenarios Técnicos</h2>
-
-                        <!-- Escenario 01 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="shield-alert" class="mr-2"></i> Escenario 01: Ransomware LockBit</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Compromiso simultáneo de la tríada CIA mediante cifrado y exfiltración de datos.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad (Exfiltración), Integridad (Cifrado), Disponibilidad (Bloqueo).</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Multi-stage attack, Data Breach, Availability Attack, Unauthorized Access.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Explotación de vulnerabilidades/credenciales y movimiento lateral.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Respaldos inmutables (offline), EDR/XDR, Segmentación de red.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 02 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="cloud-off" class="mr-2"></i> Escenario 02: Errores en la Nube</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Exposición de datos por fallas de configuración (Buckets S3 abiertos).</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Control de Acceso.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Exposure, Misconfiguration, Data Leak.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Pasiva. Ausencia de mecanismos de autenticación en servicios Cloud.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Políticas de Menor Privilegio, Auditorías CSPM, Cifrado en reposo.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 03 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="box" class="mr-2"></i> Escenario 03: Supply Chain Attack</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Compromiso de proveedor legítimo de software.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Integridad (Código alterado), Autenticación (Abuso de firma).</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Supply Chain Attack, Malware, Trust Abuse.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Inyección de código en repositorios o servidores de actualización.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Análisis SCA, Verificación de Hashes, Zero Trust, Sandboxing.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 04 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="user-x" class="mr-2"></i> Escenario 04: Credenciales Robadas</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Persistencia mediante phishing y suplantación de identidad.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Autenticación, Control de Acceso, Confidencialidad.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Credential Compromise, Phishing, Masquerade.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Ingeniería Social para captura e inicio de sesión remoto.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>MFA Obligatorio, Análisis de comportamiento (UEBA), Awareness.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 05 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="database-zap" class="mr-2"></i> Escenario 05: Destrucción de Backups</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Eliminación deliberada de respaldos para maximizar el daño.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Disponibilidad, Integridad.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Data Destruction, Availability Attack, Ransomware.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Movimiento lateral hacia consolas de administración de backups.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Estrategia 3-2-1, Respaldos inmutables (WORM), Air-gapped.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 06 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="user-check" class="mr-2"></i> Escenario 06: Insider Threat</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Empleado con acceso legítimo extrayendo y vendiendo información.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Control de Acceso.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Insider Threat, Data Leakage, Privilege Abuse.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Interna Activa. Abuso de privilegios administrativos mediante USB o Cloud.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Mínimo Privilegio (PoLP), DLP (Data Loss Prevention), UAM.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 07 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="file-warning" class="mr-2"></i> Escenario 07: Alteración de Logs</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Borrado de registros para impedir el análisis forense.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Integridad, No Repudio, Autenticación.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Audit Trail, Evidentiary Integrity, Tampering.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Acceso administrativo y uso de Log wipers.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>SIEM Centralizado con escritura Append-only en tiempo real.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 08 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="refresh-ccw" class="mr-2"></i> Escenario 08: Fallo Operacional</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Caída de servicios globales por actualización mal ejecutada.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Disponibilidad.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Operational Failure, Denial of Service (DoS), System Integrity.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Interna Accidental. Error de configuración o bug en despliegue.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Pruebas de Regresión (Staging), Canary Deployments, Rollback Planes.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 09 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="globe-2" class="mr-2"></i> Escenario 09: Sitios Clonados</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Réplicas oficiales para captura fraudulenta de datos.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Autenticación, Confidencialidad.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Masquerade, Phishing, Deception.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Typosquatting y clonación de diseño web.</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>DMARC/SPF/DKIM, Certificados EV, Security Awareness.</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Escenario 10 -->
-                        <div class="scenario-card">
-                            <div class="scenario-title"><i data-lucide="bomb" class="mr-2"></i> Escenario 10: Ataque Destructivo</div>
-                            <p class="text-sm text-slate-600 mb-6 italic">Borrado total de sistemas para sabotaje irreversible.</p>
-                            <table class="content-table">
-                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
-                                <tbody>
-                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Integridad, Disponibilidad.</td></tr>
-                                    <tr><td><b>RFC 4949</b></td><td>Destructive Attack, Data Destruction, Intrusion.</td></tr>
-                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Ejecución de software wiper (sobrescritura MBR).</td></tr>
-                                    <tr><td><b>Medida Control</b></td><td>Segregación de redes crítica, IDS/IPS, Disaster Recovery (Sitios alternos).</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="bg-blue-900 text-white p-10 rounded-[2.5rem] shadow-xl">
-                            <h2 class="text-2xl font-bold mb-6 text-blue-300">Conclusión del Análisis</h2>
-                            <p class="mb-4">La ciberseguridad no es un estado estático, sino un proceso dinámico. La aplicación de la terminología del <strong>RFC 4949</strong> resulta indispensable para cualquier profesional, ya que permite distinguir entre fallas técnicas y conceptuales.</p>
-                            <p class="text-sm text-blue-100 opacity-80 italic">"El dominio de estos marcos normativos es lo que distingue a un técnico de un analista de seguridad estratégico, capaz de proteger la infraestructura crítica."</p>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-8 border-t border-slate-200 pt-10">
-                            <div>
-                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Glosario Seleccionado</h4>
-                                <ul class="text-xs space-y-2 text-slate-500">
-                                    <li><strong>Audit Trail:</strong> Registros cronológicos para reconstruir eventos.</li>
-                                    <li><strong>No Repudio:</strong> Impedir que se niegue la autoría de una acción.</li>
-                                    <li><strong>Ataque Pasivo:</strong> Espionaje que no altera recursos.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest text-center">Bibliografía</h4>
-                                <ul class="text-[10px] text-slate-400 space-y-1">
-                                    <li>• ITU-T Recommendation X.800 (1991).</li>
-                                    <li>• Shirey, R. Internet Security Glossary (RFC 4949).</li>
-                                    <li>• Engebretson, P. The Basics of Hacking.</li>
-                                </ul>
-                            </div>
+                        <div class="mt-10 pt-8 border-t border-slate-800 text-center">
+                            <p class="italic text-blue-200">"Para una organización moderna, la ciberseguridad es una responsabilidad ética y financiera: la confianza del cliente es el activo más difícil y costoso de recuperar."</p>
                         </div>
                     </div>
-                `
-            },
-            3: {
-                title: "Actividad 03: Interpretación y traducción de políticas en iptables",
-                date: "Febrero 2026",
-                content: `<div class="p-10 text-center text-slate-400 italic font-medium">Contenido próximamente.</div>`
-            },
-            // ... resto de actividades se mantienen igual ...
-        };
+
+                    <!-- BIBLIOGRAFÍA -->
+                    <div class="pt-10 border-t border-slate-200">
+                        <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest text-center">Bibliografía Principal</h4>
+                        <ul class="text-[10px] text-slate-400 space-y-2 text-center max-w-2xl mx-auto">
+                            <li>U.S. GAO: Reporte GAO-18-559, "Data Protection: Actions Taken by Equifax".</li>
+                            <li>House of Representatives: Final Report "The Equifax Data Breach".</li>
+                            <li>Federal Trade Commission (FTC): Settlement documentation on personal data protection.</li>
+                        </ul>
+                    </div>
+                </div>
+            `
+        },
+        2: {
+            title: "Actividad 02: Análisis de servicios de seguridad (X.800 y RFC 4949)",
+            date: "27 de Enero de 2026",
+            content: `
+                <div class="space-y-12">
+                    <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 text-center space-y-4">
+                        <h3 class="text-sm font-black uppercase text-blue-700 tracking-tighter">Reporte Individual</h3>
+                        <h2 class="text-3xl font-black text-slate-900 leading-none">ANÁLISIS X.800 Y RFC 4949</h2>
+                        <p class="text-xs font-bold text-slate-500">JOSE ARMANDO PALOMO CERDA - 175932</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Introducción Técnica</h2>
+                        <p>Análisis aplicado de los servicios de seguridad ITU-T X.800 y la terminología estandarizada del RFC 4949 a través de escenarios reales de intrusión, ransomware y fallos operativos.</p>
+                    </div>
+                    <!-- Nota: He mantenido el resumen de la actividad 2 para que el objeto esté completo -->
+                    <div class="scenario-card">
+                        <div class="scenario-title"><i data-lucide="shield-alert" class="mr-2"></i> Escenario Seleccionado: Ransomware LockBit</div>
+                        <p class="text-slate-600 text-sm">Análisis detallado de exfiltración y cifrado bajo la óptica de la tríada CIA y el glosario de Internet.</p>
+                    </div>
+                    <div class="bg-blue-900 text-white p-10 rounded-[2.5rem] shadow-xl">
+                        <h2 class="text-xl font-bold mb-4 text-blue-300 text-center uppercase tracking-widest">Conclusión Técnica</h2>
+                        <p class="text-sm italic text-center">"La ciberseguridad es un proceso dinámico. Los ataques modernos son multidimensionales y abusan de la confianza técnica y humana."</p>
+                    </div>
+                </div>
+            `
+        }
+    };
+
+    function showView(view, sectionId = null) {
+        const home = document.getElementById('main-content');
+        const detail = document.getElementById('activity-detail');
+        if (view === 'home') {
+            home.classList.remove('hidden');
+            detail.classList.add('hidden');
+            if (sectionId) {
+                const el = document.getElementById(sectionId);
+                if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+            }
+        } else {
+            home.classList.add('hidden');
+            detail.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    }
+
+    function viewActivity(id) {
+        const data = activities[id] || { title: "En desarrollo", date: "-", content: "<p class='italic text-slate-400 text-center'>Próximamente.</p>" };
+        const container = document.getElementById('activity-content');
+        container.innerHTML = `
+            <div class="mb-12 text-center md:text-left">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full mb-4">Actividad ${id.toString().padStart(2, '0')}</span>
+                <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-none mb-4 tracking-tighter">${data.title}</h1>
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Publicado: ${data.date}</p>
+            </div>
+            <div class="border-t border-slate-100 pt-10">${data.content}</div>
+        `;
+        showView('detail');
+        lucide.createIcons();
+    }
+    lucide.createIcons();
+</script>
 
         function showView(view, sectionId = null) {
             const home = document.getElementById('main-content');
@@ -562,3 +452,4 @@
     </script>
 </body>
 </html>
+
