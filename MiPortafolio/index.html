@@ -4,40 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Jose Armando Palomo Cerda</title>
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS para diseño moderno y profesional -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
+    <!-- Lucide Icons para iconografía técnica -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        #main-content, #activity-detail { transition: opacity 0.3s ease; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
+        .card-hover:hover { transform: translateY(-8px); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        #main-content, #activity-detail { transition: opacity 0.4s ease-in-out; }
         .hidden { display: none; }
-        .content-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
-        .content-table th { background: #f1f5f9; padding: 0.75rem; border: 1px solid #e2e8f0; text-align: left; font-weight: 700; color: #0f172a; }
-        .content-table td { padding: 0.75rem; border: 1px solid #e2e8f0; color: #334155; vertical-align: top; }
-        pre { background: #0f172a; color: #f1f5f9; padding: 1.25rem; border-radius: 1rem; overflow-x: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; margin: 1.5rem 0; }
-        .prose h2 { color: #1e40af; border-left: 4px solid #1e40af; padding-left: 1rem; margin-top: 2.5rem; margin-bottom: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.025em; }
-        .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
-        .scenario-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.5rem; padding: 2rem; margin-bottom: 2.5rem; }
-        .scenario-title { color: #1e40af; font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; }
+        /* Estilos para tablas de reportes técnicos */
+        .content-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem; }
+        .content-table th { background: #f8fafc; padding: 1rem; border: 1px solid #e2e8f0; text-align: left; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; }
+        .content-table td { padding: 1rem; border: 1px solid #e2e8f0; color: #334155; vertical-align: top; line-height: 1.6; }
+        .content-table tr:nth-child(even) { background: #fcfdfe; }
+        pre { background: #0f172a; color: #f1f5f9; padding: 1.5rem; border-radius: 1.25rem; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 1.5rem 0; border-left: 6px solid #3b82f6; }
+        .scenario-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 2rem; padding: 2.5rem; margin-bottom: 3rem; shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .scenario-title { color: #1e40af; font-weight: 900; font-size: 1.4rem; margin-bottom: 1.5rem; display: flex; align-items: center; border-bottom: 2px solid #eff6ff; pb-4; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
 
-    <!-- NAVEGACIÓN - PF01.1 -->
+    <!-- 1. ENCABEZADO (Header) - PF01.1 -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex flex-col cursor-pointer" onclick="showView('home')">
-                <span class="text-lg font-bold text-blue-700 leading-none">Jose Armando Palomo Cerda 175932</span>
-                <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">CNO V – Seguridad Informática</span>
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col cursor-pointer group" onclick="showView('home')">
+                <span class="text-xl font-black text-blue-700 leading-none group-hover:text-blue-500 transition-colors">Jose Armando Palomo Cerda 175932</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-black mt-1">CNO V – Seguridad Informática</span>
             </div>
-            <div class="hidden md:flex space-x-6 font-medium text-sm">
+            <!-- Menú de navegación principal -->
+            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-widest">
                 <a href="javascript:void(0)" onclick="showView('home', 'inicio')" class="hover:text-blue-600 transition">Inicio</a>
                 <a href="javascript:void(0)" onclick="showView('home', 'perfil')" class="hover:text-blue-600 transition">Perfil</a>
-                <a href="javascript:void(0)" onclick="showView('home', 'actividades')" class="text-blue-600 font-bold transition">Actividades</a>
+                <a href="javascript:void(0)" onclick="showView('home', 'actividades')" class="text-blue-600 border-b-2 border-blue-600 pb-1">Actividades</a>
                 <a href="javascript:void(0)" onclick="showView('home', 'evidencias')" class="hover:text-blue-600 transition">Evidencias</a>
-                <a href="#contacto" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Contacto</a>
+                <a href="#contacto" class="px-6 py-2.5 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition shadow-lg shadow-blue-900/10">Contacto</a>
             </div>
             <div class="md:hidden text-slate-600">
                 <i data-lucide="menu"></i>
@@ -45,99 +48,156 @@
         </div>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL (HOME) -->
+    <!-- CONTENIDO PRINCIPAL (VISTA HOME) -->
     <main id="main-content">
-        <!-- 2. PRESENTACIÓN - PF01.2 -->
-        <header id="inicio" class="pt-32 pb-20 px-6 bg-white border-b border-slate-100">
-            <div class="max-w-4xl mx-auto text-center md:text-left">
-                <div class="mb-4 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">
+        <!-- 2. PRESENTACIÓN DEL PORTAFOLIO - PF01.2 -->
+        <header id="inicio" class="pt-40 pb-24 px-6 bg-white border-b border-slate-100">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-6 inline-flex items-center space-x-3 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-black uppercase tracking-[0.2em]">
                     <i data-lucide="shield-check" class="w-4 h-4"></i>
-                    <span>Portafolio Técnico Digital</span>
+                    <span>Portafolio Técnico Digital Certificado</span>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight text-slate-800">
-                    Análisis de Seguridad y <br class="hidden md:block"> Pruebas de Penetración
+                <h1 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter text-slate-900 leading-[0.95]">
+                    Análisis de Seguridad y <br class="hidden md:block text-blue-600"> Pruebas de Penetración
                 </h1>
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="space-y-4 text-slate-600 text-lg">
-                        <p><strong>Propósito:</strong> Bitácora técnica donde se recopilan las evidencias teóricas y prácticas desarrolladas durante el curso.</p>
-                        <p><strong>Enfoque:</strong> Análisis de vulnerabilidades, auditorías de sistemas y defensa proactiva.</p>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-6 text-slate-600 text-lg border-l-4 border-slate-100 pl-8">
+                        <p><strong>Propósito:</strong> Este portafolio funciona como la bitácora técnica de aprendizaje, donde se recopilan las evidencias teóricas y prácticas desarrolladas durante el curso.</p>
+                        <p><strong>Enfoque:</strong> El curso se centra en la seguridad informática, cubriendo el análisis de vulnerabilidades, auditorías de sistemas y estrategias de defensa proactiva.</p>
                     </div>
-                    <div class="p-6 bg-blue-50/50 rounded-2xl border border-blue-100 shadow-inner">
-                        <p class="text-sm text-slate-600 italic leading-relaxed">"Demostrando el progreso continuo en la resolución de problemas complejos de seguridad y el dominio de herramientas técnicas."</p>
+                    <div class="p-10 bg-blue-900 text-white rounded-[3rem] shadow-2xl relative overflow-hidden">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-16 h-16 text-white/10"></i>
+                        <p class="text-lg italic font-medium leading-relaxed relative z-10">
+                            "La importancia de este portafolio radica en demostrar el progreso continuo en la resolución de problemas complejos y el dominio de herramientas de ciberseguridad."
+                        </p>
+                        <div class="mt-8 flex flex-col space-y-1 text-[10px] font-black uppercase tracking-widest text-blue-300">
+                            <span>Universidad Politécnica de San Luis Potosí</span>
+                            <span>Semestre 9+ | Ciclo 2026</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- 3. PERFIL - PF01.3 -->
-        <section id="perfil" class="py-20 px-6 bg-slate-50">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center space-x-4 mb-10 text-3xl font-bold text-slate-800">
-                    <div class="h-10 w-2 bg-blue-600 rounded-full"></div>
-                    <h2>Perfil del Estudiante</h2>
+        <!-- 3. PERFIL DEL ESTUDIANTE - PF01.3 -->
+        <section id="perfil" class="py-24 px-6 bg-slate-50">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center space-x-6 mb-16">
+                    <div class="h-12 w-3 bg-blue-600 rounded-full shadow-lg shadow-blue-600/20"></div>
+                    <h2 class="text-4xl font-black text-slate-800 uppercase tracking-tight">Perfil del Estudiante</h2>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 md:flex gap-10 items-center">
-                    <div class="w-48 h-56 bg-slate-200 rounded-2xl mb-6 md:mb-0 flex-shrink-0 overflow-hidden border-4 border-white shadow-lg">
-                        <img src="assets/img/yo.jpg" alt="Foto Jose Armando" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Jose+Palomo&background=0D8ABC&color=fff&size=512'">
+                
+                <div class="bg-white p-10 md:p-14 rounded-[3.5rem] shadow-xl border border-slate-200 md:flex gap-16 items-center">
+                    <div class="w-56 h-64 bg-slate-200 rounded-[2.5rem] mb-8 md:mb-0 flex-shrink-0 overflow-hidden border-8 border-white shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <!-- Ruta de imagen configurada según tu repositorio -->
+                        <img src="assets/img/yo.jpg" alt="Ing. Jose Armando Palomo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Jose+Palomo&background=1e40af&color=fff&size=512'">
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-3 text-blue-700 uppercase tracking-tight">Semblanza Académica</h3>
-                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">Soy estudiante de Ingeniería en Tecnologías de la Información apasionado por la infraestructura tecnológica, diseño web y la protección de datos.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-bold">
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Seguridad Informática</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Pentesting</span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Criptografía</span>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-black mb-4 text-blue-800 uppercase tracking-tight">Semblanza Académica</h3>
+                            <p class="text-slate-600 text-lg leading-relaxed">
+                                Soy estudiante de Ingeniería en Tecnologías de la Información, apasionado por la infraestructura tecnológica, el diseño web y la protección de datos. Me enfoco en comprender cómo los sistemas pueden ser vulnerados para construir defensas más robustas y resilientes ante amenazas modernas.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-[10px] uppercase text-slate-400 mb-4 tracking-[0.3em]">Dominios de Interés</h4>
+                            <div class="flex flex-wrap gap-3 font-bold text-xs">
+                                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Seguridad Informática</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Investigación Técnica</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Pentesting</span>
+                                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-full border border-blue-100">Criptografía</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN ACTIVIDADES -->
-        <section id="actividades" class="py-20 px-6 bg-white border-y border-slate-100">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold mb-4 uppercase tracking-tight">Actividades del Curso</h2>
-                    <p class="text-slate-500 italic">Haz clic en cada actividad para acceder al artículo técnico individual.</p>
+        <!-- 4. INFORMACIÓN TÉCNICA BÁSICA - PF01.4 -->
+        <section class="py-24 px-6 bg-white border-y border-slate-100">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-widest text-slate-400">Ficha Técnica del Sitio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-10 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 bg-slate-50/50 transition-all group">
+                        <i data-lucide="code-2" class="text-blue-600 mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h4 class="font-black text-sm mb-2 uppercase tracking-widest">Tecnologías</h4>
+                        <p class="text-xs text-slate-500 font-medium">Desarrollado con HTML5, Tailwind CSS y JavaScript para una experiencia fluida.</p>
+                    </div>
+                    <div class="p-10 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 bg-slate-50/50 transition-all group">
+                        <i data-lucide="globe" class="text-blue-600 mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h4 class="font-black text-sm mb-2 uppercase tracking-widest">Publicación</h4>
+                        <p class="text-xs text-slate-500 font-medium">Hospedado de forma segura en GitHub Pages bajo protocolo HTTPS/SSL.</p>
+                    </div>
+                    <div class="p-10 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 bg-slate-50/50 transition-all group">
+                        <i data-lucide="git-branch" class="text-blue-600 mb-6 group-hover:scale-110 transition-transform"></i>
+                        <h4 class="font-black text-sm mb-2 uppercase tracking-widest">Versionado</h4>
+                        <p class="text-xs text-slate-500 font-medium">Gestión integral de cambios y control de versiones mediante Git y GitHub.</p>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover cursor-pointer" onclick="viewActivity(1)">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block text-center">Actividad 01</span>
-                        <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug text-center">Análisis de un ciberataque real y su impacto</h3>
-                        <div class="flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-wider">
-                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ACTIVIDADES (ÍNDICE TIPO BLOG) -->
+        <section id="actividades" class="py-24 px-6 bg-slate-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20 space-y-4">
+                    <h2 class="text-5xl font-black tracking-tighter uppercase">Bitácora de Actividades</h2>
+                    <p class="text-slate-500 font-bold text-sm tracking-widest uppercase italic">Haz clic para leer el artículo técnico completo</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Tarjeta Actividad 01 -->
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 card-hover cursor-pointer relative overflow-hidden group" onclick="viewActivity(1)">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[4rem] flex items-center justify-center -mr-4 -mt-4 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="shield" class="text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-4 block">Actividad 01</span>
+                        <h3 class="text-xl font-black mb-6 text-slate-800 leading-snug">Análisis de un ciberataque real y su impacto</h3>
+                        <div class="flex items-center text-blue-600 font-black text-[10px] uppercase tracking-widest">
+                            Ver reporte completo <i data-lucide="chevron-right" class="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform"></i>
                         </div>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover cursor-pointer" onclick="viewActivity(2)">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block text-center">Actividad 02</span>
-                        <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug text-center">Análisis de servicios de seguridad (X.800 y RFC 4949)</h3>
-                        <div class="flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-wider">
-                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+
+                    <!-- Tarjeta Actividad 02 -->
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 card-hover cursor-pointer relative overflow-hidden group" onclick="viewActivity(2)">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-[4rem] flex items-center justify-center -mr-4 -mt-4 group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="file-text" class="text-blue-600 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-4 block">Actividad 02</span>
+                        <h3 class="text-xl font-black mb-6 text-slate-800 leading-snug">Análisis de servicios de seguridad (X.800 y RFC 4949)</h3>
+                        <div class="flex items-center text-blue-600 font-black text-[10px] uppercase tracking-widest">
+                            Ver reporte completo <i data-lucide="chevron-right" class="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform"></i>
                         </div>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover cursor-pointer" onclick="viewActivity(3)">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block text-center">Actividad 03</span>
-                        <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug text-center text-slate-400">Políticas de filtrado en iptables (Pendiente)</h3>
-                        <div class="flex items-center justify-center text-slate-300 font-bold text-xs uppercase tracking-wider">
-                            Próximamente <i data-lucide="lock" class="w-4 h-4 ml-2"></i>
+
+                    <!-- Tarjeta Actividad 03 (Pendiente) -->
+                    <div class="bg-slate-100 p-10 rounded-[2.5rem] border border-slate-200 opacity-60">
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4 block">Actividad 03</span>
+                        <h3 class="text-xl font-black mb-6 text-slate-400 leading-snug">Interpretación y traducción de políticas en iptables</h3>
+                        <div class="flex items-center text-slate-300 font-black text-[10px] uppercase tracking-widest">
+                            En desarrollo <i data-lucide="lock" class="w-4 h-4 ml-2"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- EVIDENCIAS -->
-        <section id="evidencias" class="py-20 px-6 bg-slate-50">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-12 text-slate-400 italic uppercase tracking-widest text-center">Evidencias por Parcial</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- SECCIÓN DE EVIDENCIAS -->
+        <section id="evidencias" class="py-24 px-6 bg-white">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-black mb-16 text-slate-300 italic uppercase tracking-[0.2em] text-center">Evidencias por Parcial</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     <div class="space-y-6">
-                        <h3 class="text-xl font-bold border-b-2 border-blue-600 pb-2 inline-block">Parcial 1</h3>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
-                            <h4 class="font-bold text-slate-800 text-sm uppercase mb-2">Tarea 1: Glosario</h4>
-                            <p class="text-xs text-slate-500 mb-4">Conceptos fundamentales de amenazas y vectores de ataque.</p>
-                            <a href="Parciales/Parcial1/glosario.pdf" target="_blank" class="w-full inline-flex items-center justify-center py-2 bg-blue-600 text-white rounded-lg text-xs font-bold hover:bg-blue-700 transition">
-                                Ver PDF <i data-lucide="external-link" class="w-3 h-3 ml-2"></i>
+                        <h3 class="text-xl font-black border-b-4 border-blue-600 pb-2 inline-block text-slate-800">PARCIAL 1</h3>
+                        <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-200 card-hover">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h4 class="font-black text-slate-800 text-sm uppercase mb-2">Tarea 1: Glosario</h4>
+                            <p class="text-xs text-slate-500 mb-6 leading-relaxed font-medium">Conceptos fundamentales de amenazas y vectores de ataque.</p>
+                            <a href="Parciales/Parcial1/glosario.pdf" target="_blank" class="w-full inline-flex items-center justify-center py-3 bg-blue-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-blue-700 transition shadow-xl shadow-blue-600/20">
+                                Descargar PDF <i data-lucide="external-link" class="w-3 h-3 ml-2"></i>
                             </a>
                         </div>
                     </div>
@@ -146,533 +206,264 @@
         </section>
     </main>
 
-    <!-- VISTA DE DETALLE DE ACTIVIDAD -->
-    <section id="activity-detail" class="hidden pt-32 pb-20 px-6 min-h-screen bg-slate-100">
-        <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-[2.5rem] shadow-2xl border border-slate-200 relative">
-            <button onclick="showView('home', 'actividades')" class="flex items-center text-blue-600 font-bold mb-10 hover:bg-blue-50 px-5 py-2 rounded-xl transition border border-transparent hover:border-blue-100">
-                <i data-lucide="arrow-left" class="mr-2 w-5 h-5"></i> Volver al índice
-            </button>
-            <div id="activity-content" class="prose prose-slate max-w-none">
-                <!-- Carga dinámica -->
+    <!-- VISTA DE DETALLE DE ACTIVIDAD (SPA) -->
+    <section id="activity-detail" class="hidden pt-32 pb-24 px-6 min-h-screen bg-slate-50">
+        <div class="max-w-5xl mx-auto bg-white p-8 md:p-20 rounded-[3.5rem] shadow-2xl border border-slate-200 relative">
+            <div id="activity-content">
+                <!-- Se inyecta el contenido detallado del script aquí -->
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO - PF01.5 -->
-    <section id="contacto" class="py-20 px-6 bg-slate-900 text-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-2">Contacto</h2>
-            <div class="mb-10">
-                <p class="text-blue-400 font-bold text-xl uppercase tracking-widest">Ing. Jose Armando Palomo Cerda</p>
-                <a href="mailto:175932@upslp.edu.mx" class="text-slate-400 hover:text-white transition font-mono text-lg underline decoration-blue-500/30">175932@upslp.edu.mx</a>
+    <!-- 5. FORMULARIO DE CONTACTO - PF01.5 -->
+    <section id="contacto" class="py-24 px-6 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">Contacto Directo</h2>
+            <div class="mb-14 space-y-2">
+                <p class="text-blue-400 font-black text-2xl uppercase tracking-[0.2em]">Ing. Jose Armando Palomo Cerda</p>
+                <a href="mailto:175932@upslp.edu.mx" class="text-slate-400 hover:text-white transition font-mono text-xl">175932@upslp.edu.mx</a>
             </div>
-            <form class="text-left space-y-4 bg-slate-800 p-8 md:p-12 rounded-[2rem] border border-slate-700 shadow-2xl">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Nombre Completo" class="w-full p-4 rounded-xl bg-slate-900 border-slate-700 border text-white outline-none focus:ring-2 focus:ring-blue-500/50 transition">
-                    <input type="email" placeholder="Correo Electrónico" class="w-full p-4 rounded-xl bg-slate-900 border-slate-700 border text-white outline-none focus:ring-2 focus:ring-blue-500/50 transition">
+            
+            <form class="text-left space-y-6 bg-slate-800 p-8 md:p-16 rounded-[3.5rem] border border-slate-700 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase text-slate-500 ml-4 tracking-[0.3em]">Nombre Completo</label>
+                        <input type="text" placeholder="Tu nombre" class="w-full p-5 rounded-2xl bg-slate-900 border-slate-700 border text-white font-medium outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase text-slate-500 ml-4 tracking-[0.3em]">Correo Electrónico</label>
+                        <input type="email" placeholder="tu@correo.com" class="w-full p-5 rounded-2xl bg-slate-900 border-slate-700 border text-white font-medium outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all">
+                    </div>
                 </div>
-                <textarea rows="4" placeholder="Mensaje Técnico" class="w-full p-4 rounded-xl bg-slate-900 border-slate-700 border text-white outline-none focus:ring-2 focus:ring-blue-500/50 transition"></textarea>
-                <button type="button" class="w-full bg-blue-600 text-white font-bold py-5 rounded-xl hover:bg-blue-500 transition shadow-lg shadow-blue-600/20 uppercase tracking-widest">Enviar Consulta Técnica</button>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black uppercase text-slate-500 ml-4 tracking-[0.3em]">Mensaje Técnico</label>
+                    <textarea rows="5" placeholder="Escribe tu consulta aquí..." class="w-full p-5 rounded-2xl bg-slate-900 border-slate-700 border text-white font-medium outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all"></textarea>
+                </div>
+                <button type="button" class="w-full bg-blue-600 text-white font-black py-6 rounded-2xl hover:bg-blue-500 transition shadow-2xl shadow-blue-600/30 uppercase tracking-[0.4em] text-xs">Enviar Consulta Técnica</button>
             </form>
         </div>
     </section>
 
-    <!-- FOOTER - PF01.6 -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-20 text-center text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="text-sm font-bold uppercase tracking-widest mb-3">Jose Armando Palomo Cerda | 175932</p>
-            <p class="text-xs text-slate-500">Ingeniería en Tecnologías de la Información | San Luis Potosí</p>
-            <p class="text-[10px] text-slate-600 mt-10 tracking-widest uppercase">© 2026 Universidad Politécnica de San Luis Potosí</p>
+    <!-- 6. PIE DE PÁGINA (Footer) - PF01.6 -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-24 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center space-x-10 mb-12 text-slate-600">
+                <a href="#" class="hover:text-blue-500 transition"><i data-lucide="github" class="w-8 h-8"></i></a>
+                <a href="#" class="hover:text-blue-500 transition"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
+                <a href="#" class="hover:text-blue-500 transition"><i data-lucide="mail" class="w-8 h-8"></i></a>
+            </div>
+            <div class="space-y-4">
+                <p class="text-lg font-black text-white uppercase tracking-[0.5em]">Jose Armando Palomo Cerda</p>
+                <p class="text-xs text-slate-500 font-bold tracking-widest uppercase">Matrícula 175932 | UPSLP</p>
+                <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full my-8"></div>
+                <p class="text-[10px] text-slate-600 font-black uppercase tracking-[0.8em]">© 2026 - SEGURIDAD EN CADA BIT</p>
+            </div>
         </div>
     </footer>
 
-    
+    <!-- LOGICA TÉCNICA DEL PORTAFOLIO -->
     <script>
-    /**
-     * BASE DE DATOS TÉCNICA DINÁMICA DEL PORTAFOLIO
-     * Este objeto contiene la transcripción íntegra y detallada de los reportes.
-     * Diseñado para cumplir con los estándares de documentación técnica digital.
-     */
-    const activities = {
-        1: {
-            title: "Actividad 01: Análisis en grupo de un ciberataque real y su impacto empresarial",
-            date: "30 de Enero de 2026",
-            content: `
-                <div class="space-y-16 py-8">
-                    
-                    <!-- 1. PORTADA TÉCNICA E IDENTIFICACIÓN DEL EQUIPO -->
-                    <div class="bg-slate-50 p-12 rounded-[3rem] border-2 border-slate-200 text-center space-y-8 shadow-2xl relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-800"></div>
-                        <div class="space-y-2">
-                            <h3 class="text-blue-700 font-black uppercase tracking-[0.4em] text-xs">Bitácora de Seguridad Informática</h3>
-                            <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter uppercase">
-                                Análisis de Caso: <br/>Brecha de Seguridad Equifax 2017
-                            </h2>
-                        </div>
-                        
-                        <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
-
-                        <div class="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto py-8">
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                                <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest border-b pb-2">Integrantes del Equipo 1</h4>
-                                <ul class="text-xs font-bold text-slate-600 space-y-2">
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Jasso Dávila Pedro Damián - 176658</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Moreno Solís Gisela Geraldine - 176522</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Palomo Cerdá José Armando - 175932</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Zarate Domínguez David - 175842</li>
-                                    <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Zorrilla Rivera Eduardo - 175877</li>
-                                </ul>
-                            </div>
-                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                                <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest border-b pb-2">Información Académica</h4>
-                                <div class="space-y-4">
-                                    <div>
-                                        <p class="text-[10px] text-slate-400 uppercase">Catedrático</p>
-                                        <p class="text-sm font-black text-blue-600">Mtro. Servando López Contreras</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-[10px] text-slate-400 uppercase">Institución</p>
-                                        <p class="text-xs font-bold text-slate-700 leading-tight">Universidad Politécnica de San Luis Potosí<br/>CNO V Seguridad Informática</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-[10px] text-slate-400 uppercase">Fecha de Entrega</p>
-                                        <p class="text-xs font-bold text-slate-700">30 de Enero de 2026</p>
-                                    </div>
-                                </div>
+        /**
+         * BASE DE DATOS TÉCNICA DINÁMICA
+         * Transcripción completa de los reportes en formato HTML para renderizado dinámico.
+         */
+        const activities = {
+            1: {
+                title: "Análisis en grupo de un ciberataque real y su impacto empresarial",
+                date: "30 de Enero de 2026",
+                content: `
+                    <div class="space-y-16 py-8">
+                        <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-200 text-center space-y-8 shadow-inner">
+                            <h3 class="text-sm font-black uppercase text-blue-700 tracking-widest">Reporte Técnico de Equipo</h3>
+                            <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter uppercase italic">ANÁLISIS DE CASO: EQUIFAX 2017</h2>
+                            <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                            <div class="grid md:grid-cols-2 gap-4 text-xs font-bold text-slate-600 text-left max-w-2xl mx-auto py-6">
+                                <p>• Jasso Dávila Pedro Damián - 176658</p>
+                                <p>• Moreno Solís Gisela Geraldine - 176522</p>
+                                <p>• Palomo Cerdá José Armando - 175932</p>
+                                <p>• Zarate Domínguez David - 175842</p>
+                                <p>• Zorrilla Rivera Eduardo - 175877</p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- 2. INTRODUCCIÓN DEL REPORTE -->
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="h-12 w-2 bg-blue-600 rounded-full"></div>
-                            <h2 class="text-3xl font-black text-slate-800 uppercase tracking-tight">Introducción</h2>
+                        <div class="space-y-8">
+                            <h2 class="text-3xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight">Introducción</h2>
+                            <p class="text-slate-600 text-lg leading-relaxed">El presente reporte documenta el ciberataque sufrido por <strong>Equifax en 2017</strong>, considerado uno de los incidentes de ex-filtración masiva más graves en el sector financiero. El ataque fue posible mediante la explotación de la vulnerabilidad <strong>CVE-2017-5638 en Apache Struts</strong>, la cual permitió la ejecución remota de código (RCE) debido a la omisión de un parche de seguridad disponible meses antes del incidente.</p>
+                            <p class="text-slate-600 text-lg leading-relaxed">La brecha expuso deficiencias críticas en la gestión de activos y la visibilidad operativa, destacando el vencimiento de certificados SSL que impidieron la detección del tráfico malicioso durante 76 días. Con un impacto que afectó a <strong>147.5 millones de víctimas</strong> y resultó en un acuerdo judicial de <strong>$1.4 mil millones de USD</strong>.</p>
                         </div>
-                        <div class="grid md:grid-cols-1 gap-6 text-slate-600 text-lg leading-relaxed text-justify prose prose-blue">
-                            <p>
-                                El presente reporte documenta el ciberataque sufrido por <strong>Equifax en 2017</strong>, considerado uno de los incidentes de ex-filtración masiva más graves en el sector financiero. El ataque fue posible mediante la explotación de la vulnerabilidad <strong>CVE-2017-5638 en Apache Struts</strong>, la cual permitió la ejecución remota de código (RCE) debido a la omisión de un parche de seguridad disponible meses antes del incidente.
-                            </p>
-                            <p>
-                                La brecha expuso deficiencias críticas en la gestión de activos y la visibilidad operativa, destacando el vencimiento de certificados SSL que impidieron la detección del tráfico malicioso durante 76 días. Con un impacto que afectó a <strong>147.5 millones de víctimas</strong> y resultó en un acuerdo judicial de <strong>$1.4 mil millones de USD</strong>.
-                            </p>
-                            <p>
-                                Este estudio tiene el propósito de evaluar las consecuencias bajo el modelo <strong>CIA (Confidencialidad, Integridad y Disponibilidad)</strong> para comprender la relación entre la ciberseguridad y la sostenibilidad organizacional.
-                            </p>
-                        </div>
-                    </div>
 
-                    <!-- 3. CRONOLOGÍA DETALLADA (LITERAL DEL PDF) -->
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="h-12 w-2 bg-slate-900 rounded-full"></div>
-                            <h2 class="text-3xl font-black text-slate-800 uppercase tracking-tight">Cronología de la Investigación (Expediente EQX-2017)</h2>
-                        </div>
-                        
-                        <div class="overflow-hidden rounded-[2rem] border border-slate-200 shadow-lg">
-                            <table class="w-full border-collapse">
-                                <thead>
-                                    <tr class="bg-slate-900 text-white text-xs uppercase tracking-widest font-black">
-                                        <th class="p-6 text-left border-r border-slate-800">Fecha</th>
-                                        <th class="p-6 text-left border-r border-slate-800">Hora</th>
-                                        <th class="p-6 text-left">Evento y Detalles Técnicos</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white text-sm">
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">07 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">10:00 hrs</td>
-                                        <td class="p-6 text-slate-600">El DHS de EE. UU. emite una <strong>alerta crítica</strong> sobre la vulnerabilidad CVE-2017-5638 en Apache Struts.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">08 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">09:00 hrs</td>
-                                        <td class="p-6 text-slate-600">El equipo de seguridad global de Equifax recibe la notificación y clasifica el riesgo como <strong>"Inminente y Crítico"</strong>.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">09 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">08:30 hrs</td>
-                                        <td class="p-6 text-slate-600">Distribución de correo interno ordenando la aplicación del parche en un periodo máximo de <strong>48 horas</strong>.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">10 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">15:00 hrs</td>
-                                        <td class="p-6 text-slate-600">El equipo de TI ejecuta un escaneo de vulnerabilidades automatizado en la red externa.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-200 bg-red-50 hover:bg-red-100 transition-colors">
-                                        <td class="p-6 font-black text-red-700 whitespace-nowrap">10 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-red-400">17:00 hrs</td>
-                                        <td class="p-6 text-red-900 font-medium italic">
-                                            <strong>Fallo operativo:</strong> El escaneo no identifica el portal de disputas como sistema vulnerable por error de configuración.
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">12 de marzo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">00:00 hrs</td>
-                                        <td class="p-6 text-slate-600">Vence el plazo interno. El servidor crítico queda <strong>expuesto sin protección</strong> en el puerto 443.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-blue-50/20 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">13 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">21:15 hrs</td>
-                                        <td class="p-6 text-slate-600"><strong>Intrusión inicial:</strong> Los atacantes detectan el vector y ejecutan el primer comando RCE exitoso.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">13 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">23:50 hrs</td>
-                                        <td class="p-6 text-slate-600">Instalación de una <strong>Web Shell</strong> (puerta trasera) para asegurar la persistencia en el sistema.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">14 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">04:00 hrs</td>
-                                        <td class="p-6 text-slate-600">Fase de reconocimiento interno: Búsqueda activa de archivos de configuración locales.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-200 bg-yellow-50 hover:bg-yellow-100 transition-colors">
-                                        <td class="p-6 font-black text-yellow-800 whitespace-nowrap">15 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-yellow-600">11:20 hrs</td>
-                                        <td class="p-6 text-yellow-900">
-                                            <strong>Evidencia crítica:</strong> Localización de un archivo con credenciales de base de datos en <strong>texto plano</strong>.
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">16 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">02:00 hrs</td>
-                                        <td class="p-6 text-slate-600">Movimiento lateral exitoso hacia los servidores de bases de datos centrales.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">20 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">14:00 hrs</td>
-                                        <td class="p-6 text-slate-600">Consultas de prueba para medir tiempos de respuesta en la base de datos de crédito.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">25 de mayo, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">09:00 hrs</td>
-                                        <td class="p-6 text-slate-600">Se establece canal de <strong>exfiltración cifrado</strong>. No se detecta por falta de inspección activa.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-blue-100/30 hover:bg-blue-50 transition-colors font-bold">
-                                        <td class="p-6 font-black text-blue-900 whitespace-nowrap">01 de junio, 2017</td>
-                                        <td class="p-6 font-bold text-blue-400">00:00 hrs</td>
-                                        <td class="p-6 text-blue-900">Comienza la <strong>extracción masiva de PII</strong> (5 millones de registros diarios).</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">10 de junio, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">10:30 hrs</td>
-                                        <td class="p-6 text-slate-600">Expansión de presencia: Instalación de más de <strong>30 web shells</strong> adicionales.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors font-bold">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">20 de junio, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">18:00 hrs</td>
-                                        <td class="p-6 text-slate-600">La extracción supera los <strong>200 GB de datos exfiltrados</strong> sin interrupciones.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 hover:bg-blue-50/30 transition-colors font-bold text-red-600">
-                                        <td class="p-6 font-black whitespace-nowrap">29 de julio, 2017</td>
-                                        <td class="p-6 font-bold text-red-400">10:15 hrs</td>
-                                        <td class="p-6"><strong>DETECCIÓN:</strong> Identificación de tráfico sospechoso hacia IP externa no autorizada.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100 bg-slate-50/50 hover:bg-blue-50/30 transition-colors font-bold">
-                                        <td class="p-6 font-black text-blue-700 whitespace-nowrap">29 de julio, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400">11:30 hrs</td>
-                                        <td class="p-6 text-slate-600">Se descubre que el certificado SSL de monitoreo venció en <strong>Septiembre de 2016</strong>.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-900 bg-slate-900 text-white font-bold">
-                                        <td class="p-6 font-black whitespace-nowrap uppercase">24 de agosto, 2017</td>
-                                        <td class="p-6 font-bold text-slate-400 uppercase">10:00 hrs</td>
-                                        <td class="p-6">Venta de acciones por ejecutivos ($1.8 millones) previa al anuncio masivo.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 4. ANÁLISIS ESTRATÉGICO Y TÉCNICO -->
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="h-12 w-2 bg-blue-600 rounded-full"></div>
-                            <h2 class="text-3xl font-black text-slate-800 uppercase tracking-tight">Análisis Estratégico del Equipo</h2>
-                        </div>
-                        <p class="text-slate-600 leading-relaxed italic">
-                            Tras la reconstrucción de los hechos, el equipo pericial concluye que el éxito de la intrusión se debió a una pérdida de control del ciclo de vida de los activos. No se trata únicamente de un servidor olvidado; se trata de una ruptura en la <strong>Cadena de Mando de TI</strong>.
-                        </p>
-                        
-                        <div class="grid lg:grid-cols-3 gap-8">
-                            <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all space-y-4">
-                                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center"><i data-lucide="wrench"></i></div>
-                                <h4 class="font-black text-slate-800 uppercase text-xs tracking-[0.2em]">Omisión de Mantenimiento</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed">La vulnerabilidad era pública desde marzo. La incapacidad para identificar servidores vulnerables demuestra falta de inventario de activos, violando la <strong>ISO 27001</strong>.</p>
-                            </div>
-                            <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all space-y-4">
-                                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center"><i data-lucide="eye-off"></i></div>
-                                <h4 class="font-black text-slate-800 uppercase text-xs tracking-[0.2em]">Falla de Visibilidad</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed">Un Certificado SSL vencido por 10 meses es negligencia grave. Es equivalente a tener cámaras pero el monitor desconectado.</p>
-                            </div>
-                            <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-md transition-all space-y-4">
-                                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center"><i data-lucide="lock"></i></div>
-                                <h4 class="font-black text-slate-800 uppercase text-xs tracking-[0.2em]">Higiene de Datos</h4>
-                                <p class="text-xs text-slate-500 leading-relaxed">Las credenciales en <strong>texto plano</strong> eliminaron la resistencia interna. Una intrusión web se volvió acceso total a los datos crediticios.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. TABLAS TÉCNICAS Y EVALUACIÓN CIA -->
-                    <div class="grid lg:grid-cols-2 gap-12">
-                        <div class="space-y-6">
-                            <h3 class="text-xl font-black text-slate-800 uppercase border-b-4 border-blue-600 pb-2 inline-block">Ficha Técnica del Ataque</h3>
-                            <table class="w-full text-xs">
-                                <tbody class="border border-slate-200 rounded-xl">
-                                    <tr class="border-b"><td class="p-4 bg-slate-50 font-black text-slate-500 w-1/3">Tipo de Ataque</td><td class="p-4">RCE (Ejecución remota de código) y exfiltración masiva.</td></tr>
-                                    <tr class="border-b"><td class="p-4 bg-slate-50 font-black text-slate-500">Actor/Grupo</td><td class="p-4">Vinculados a inteligencias extranjeras.</td></tr>
-                                    <tr class="border-b"><td class="p-4 bg-slate-50 font-black text-slate-500">Vector Entrada</td><td class="p-4">Puerto 443 (Portal de Disputas).</td></tr>
-                                    <tr class="border-b"><td class="p-4 bg-slate-50 font-black text-slate-500">Vulnerabilidad</td><td class="p-4 font-bold text-red-600 italic">CVE-2017-5638 (Apache Struts).</td></tr>
-                                    <tr class="border-b"><td class="p-4 bg-slate-50 font-black text-slate-500">Severidad</td><td class="p-4 font-black">10.0 / 10.0 (Crítico).</td></tr>
-                                    <tr><td class="p-4 bg-slate-50 font-black text-slate-500">Duración Activa</td><td class="p-4">76 días (13 Mayo - 29 Julio 2017).</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <div class="space-y-6">
-                            <h3 class="text-xl font-black text-slate-800 uppercase border-b-4 border-blue-600 pb-2 inline-block">Evaluación CIA</h3>
-                            <div class="overflow-hidden rounded-2xl border border-slate-200">
-                                <table class="w-full text-xs">
-                                    <thead><tr class="bg-blue-600 text-white"><th class="p-4 text-left">Principio</th><th class="p-4 text-left">Evidencia del Caso</th></tr></thead>
+                        <div class="space-y-8">
+                            <h2 class="text-3xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight">Cronología Detallada (Expediente EQX-2017)</h2>
+                            <div class="overflow-x-auto rounded-[2rem] border border-slate-200">
+                                <table class="content-table w-full">
+                                    <thead><tr class="bg-slate-900 text-white"><th>Fecha</th><th>Hora</th><th>Evento y Descripción Técnica</th></tr></thead>
                                     <tbody class="bg-white">
-                                        <tr class="border-b"><td class="p-4 font-black">Confidencialidad</td><td class="p-4">Robo de registros de <strong>147.5 millones de personas</strong> (SSN, tarjetas, fechas).</td></tr>
-                                        <tr class="border-b"><td class="p-4 font-black">Integridad</td><td class="p-4">Credenciales en texto plano alteradas y ejecución de queries de prueba en DB centrales.</td></tr>
-                                        <tr><td class="p-4 font-black">Disponibilidad</td><td class="p-4">Bloqueo total del portal de disputas el 29 de julio y caída del sitio de ayuda.</td></tr>
+                                        <tr><td class="font-black">07 Mar 2017</td><td class="text-slate-400">10:00</td><td>DHS emite alerta crítica sobre vulnerabilidad CVE-2017-5638 en Apache Struts.</td></tr>
+                                        <tr><td class="font-black">08 Mar 2017</td><td class="text-slate-400">09:00</td><td>Equifax clasifica el riesgo como "Inminente y Crítico".</td></tr>
+                                        <tr class="bg-red-50/50"><td class="font-black text-red-600">10 Mar 2017</td><td class="text-red-400 font-bold">17:00</td><td><b>Fallo operativo:</b> El escaneo no identifica el portal de disputas por error de red.</td></tr>
+                                        <tr><td class="font-black text-red-600">12 Mar 2017</td><td class="text-red-400">00:00</td><td>Vence el plazo interno para el parcheo. Servidor queda expuesto en puerto 443.</td></tr>
+                                        <tr><td class="font-black">13 May 2017</td><td class="text-slate-400">21:15</td><td><b>Intrusión inicial:</b> Se registra el primer comando RCE exitoso.</td></tr>
+                                        <tr><td class="font-black">15 May 2017</td><td class="text-slate-400">11:20</td><td>Hallazgo de evidencia crítica: Credenciales de base de datos en <b>texto plano</b>.</td></tr>
+                                        <tr><td class="font-black">01 Jun 2017</td><td class="text-slate-400">00:00</td><td>Comienza la extracción masiva de PII: 5 millones de registros por día.</td></tr>
+                                        <tr class="bg-blue-50"><td class="font-black text-blue-700">29 Jul 2017</td><td class="text-blue-400 font-bold">10:15</td><td><b>Detección:</b> Se identifica tráfico anómalo. Certificado SSL de monitoreo vencido en 2016.</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- 6. ANÁLISIS ECONÓMICO DETALLADO -->
-                    <div class="bg-slate-900 text-white p-12 rounded-[3.5rem] shadow-2xl relative">
-                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 space-y-4 md:space-y-0">
-                            <div class="space-y-2">
-                                <h3 class="text-blue-400 font-black uppercase text-xs tracking-widest">Cálculo de Costo Total del Ciberataque</h3>
-                                <h2 class="text-4xl font-black tracking-tighter">Impacto Financiero Proyectado</h2>
+                        <div class="grid lg:grid-cols-2 gap-12">
+                            <div class="space-y-6">
+                                <h3 class="text-xl font-black text-slate-800 uppercase border-b-4 border-blue-600 pb-2 inline-block">Evaluación del Impacto (CIA)</h3>
+                                <table class="content-table w-full">
+                                    <thead><tr class="bg-blue-600 text-white"><th>Principio</th><th>Evidencia del Caso</th></tr></thead>
+                                    <tbody class="bg-white">
+                                        <tr><td class="font-bold">Confidencialidad</td><td>Robo de registros de 147.5M de personas (SSN, tarjetas).</td></tr>
+                                        <tr><td class="font-bold">Integridad</td><td>Archivo con credenciales en texto plano localizados.</td></tr>
+                                        <tr><td class="font-bold">Disponibilidad</td><td>Bloqueo del portal de disputas el 29 de julio.</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="text-right">
-                                <p class="text-[10px] text-slate-500 uppercase font-black">Tipo de Cambio Promedio 2017</p>
-                                <p class="text-xl font-mono text-blue-400">≈ $18.50 MXN / 1 USD</p>
+                            <div class="space-y-6">
+                                <h3 class="text-xl font-black text-slate-800 uppercase border-b-4 border-blue-600 pb-2 inline-block">Análisis de Costos (MXN)</h3>
+                                <table class="content-table w-full text-right font-mono">
+                                    <thead><tr class="bg-slate-900 text-white text-left"><th>Concepto</th><th>Monto Estimado</th></tr></thead>
+                                    <tbody class="bg-white">
+                                        <tr><td class="text-left">Daños Reputacionales</td><td>$74,000,000,000</td></tr>
+                                        <tr><td class="text-left">Costos Técnicos</td><td>$18,500,000,000</td></tr>
+                                        <tr><td class="text-left font-bold text-blue-700">TOTAL ESTIMADO</td><td class="font-bold text-blue-700">$107,115,000,000</td></tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-[10px] text-slate-400 italic text-center leading-none uppercase tracking-widest font-black">TC Promedio 2017: $18.50 MXN / USD</p>
                             </div>
                         </div>
-                        
-                        <div class="overflow-x-auto">
-                            <table class="w-full border-collapse text-left">
-                                <thead class="border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-4 text-[10px] font-black uppercase text-slate-500">Categoría de Costo</th>
-                                        <th class="p-4 text-[10px] font-black uppercase text-slate-500">Descripción y Alcance</th>
-                                        <th class="p-4 text-[10px] font-black uppercase text-slate-500 text-right">Estimación (MXN)</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-sm">
-                                    <tr class="border-b border-slate-800/50">
-                                        <td class="p-6 font-black text-blue-400">Pérdidas Operativas</td>
-                                        <td class="p-6 text-slate-400">Interrupción de servicios, suspensión de portal, horas hombre en contención y caída de productividad.</td>
-                                        <td class="p-6 text-right font-mono">$1,665,000,000</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-800/50">
-                                        <td class="p-6 font-black text-blue-400">Daños Reputacionales</td>
-                                        <td class="p-6 text-slate-400">Pérdida de confianza, fuga de clientes masiva y caída del valor de acciones en mercado (Market Cap).</td>
-                                        <td class="p-6 text-right font-mono">$74,000,000,000</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-800/50">
-                                        <td class="p-6 font-black text-blue-400">Costos Técnicos</td>
-                                        <td class="p-6 text-slate-400">Forense (Mandiant), renovación de infraestructura IT, monitoreo para víctimas y remediación tecnológica.</td>
-                                        <td class="p-6 text-right font-mono">$18,500,000,000</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-800/50">
-                                        <td class="p-6 font-black text-blue-400">Costos Legales</td>
-                                        <td class="p-6 text-slate-400">Acuerdo judicial con FTC, CFPB, estados de EE. UU. y resolución de demandas colectivas posteriores.</td>
-                                        <td class="p-6 text-right font-mono">$12,950,000,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-8 text-xl font-black uppercase text-white" colspan="2 text-left">TOTAL ESTIMADO</td>
-                                        <td class="p-8 text-right font-black text-3xl text-blue-500 font-mono tracking-tighter">$107,115,000,000</td>
-                                    </tr>
+
+                        <div class="bg-slate-900 text-white p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden">
+                            <i data-lucide="alert-triangle" class="absolute -right-6 -bottom-6 w-32 h-32 text-white/5 rotate-12"></i>
+                            <h2 class="text-2xl font-black mb-8 text-blue-400 uppercase tracking-tighter">Conclusiones Estratégicas</h2>
+                            <div class="grid md:grid-cols-2 gap-10 text-sm text-slate-300 leading-relaxed">
+                                <p>• <strong>Visibilidad:</strong> El desconocimiento del inventario fue la causa raíz. No se puede proteger lo que no se sabe que existe.</p>
+                                <p>• <strong>Higiene de Datos:</strong> Almacenar credenciales en texto plano facilitó el acceso total sin resistencia interna.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                title: "Análisis de servicios de seguridad (X.800 y RFC 4949)",
+                date: "27 de Enero de 2026",
+                content: `
+                    <div class="space-y-16 py-8">
+                        <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-200 text-center space-y-6 shadow-inner">
+                            <h3 class="text-sm font-black uppercase text-blue-700 tracking-widest">Reporte Individual de Análisis</h3>
+                            <h2 class="text-4xl font-black text-slate-900 leading-tight uppercase">SERVICIOS X.800 Y RFC 4949</h2>
+                            <p class="text-sm font-black text-slate-500 uppercase tracking-widest">Jose Armando Palomo Cerda - 175932</p>
+                        </div>
+
+                        <div class="space-y-8">
+                            <h2 class="text-3xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight">Introducción Técnica</h2>
+                            <p class="text-slate-600 text-lg leading-relaxed">Este reporte analiza la aplicación del modelo <strong>ITU-T X.800</strong> y el glosario <strong>RFC 4949</strong> a través de 10 escenarios reales, demostrando la importancia de una terminología estandarizada para el diagnóstico de amenazas y la propuesta de mitigaciones.</p>
+                        </div>
+
+                        <!-- Escenario 01 Transcrito -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="shield-alert" class="mr-4 w-8 h-8"></i> Escenario 01: Ransomware LockBit</div>
+                            <p class="text-slate-600 mb-8 italic border-l-4 border-slate-100 pl-6">Cifrado masivo tras exfiltración de información sensible, evidenciando un compromiso total de la tríada CIA.</p>
+                            <table class="content-table w-full">
+                                <thead><tr class="bg-slate-50"><th>Elemento RFC 4949</th><th>Respuesta Técnica Detallada</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="font-bold">Ataque Definido</td><td>Multi-stage attack, Data Breach, Availability Attack.</td></tr>
+                                    <tr><td class="font-bold">Servicios X.800</td><td>Confidencialidad (Exfiltración), Integridad (Cifrado), Disponibilidad (Bloqueo).</td></tr>
+                                    <tr><td class="font-bold">Control Propuesto</td><td>Respaldos inmutables (offline) y segmentación de red Zero Trust.</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
 
-                    <!-- 7. RELACIÓN CON MARCOS NORMATIVOS -->
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="h-12 w-2 bg-blue-600 rounded-full"></div>
-                            <h2 class="text-3xl font-black text-slate-800 uppercase tracking-tight">Relación con Marcos Normativos</h2>
-                        </div>
-                        <div class="overflow-x-auto rounded-[2.5rem] border border-slate-200">
-                            <table class="w-full text-xs">
-                                <thead>
-                                    <tr class="bg-slate-50 text-slate-400 uppercase tracking-widest font-black">
-                                        <th class="p-6 border-b text-left">Marco</th>
-                                        <th class="p-6 border-b text-left">Control/Fallo</th>
-                                        <th class="p-6 border-b text-left">Acción Correctiva Omitida</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white">
-                                    <tr class="border-b border-slate-100">
-                                        <td class="p-6 font-black text-slate-800 w-1/4">ISO 27001:2013</td>
-                                        <td class="p-6"><strong>A.12.6.1 Gestión de vulnerabilidades técnicas.</strong> No se parchó CVE-2017-5638 a tiempo.</td>
-                                        <td class="p-6 italic text-slate-500">Parchado obligatorio dentro de las 48 horas posteriores a la alerta crítica del DHS.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100">
-                                        <td class="p-6 font-black text-slate-800">ISO 27001:2013</td>
-                                        <td class="p-6"><strong>A.8.1.1 Inventario de activos.</strong> El portal de disputas no estaba en el radar de TI.</td>
-                                        <td class="p-6 italic text-slate-500">Un inventario actualizado habría alertado sobre la necesidad de parchear ese servidor específico.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100">
-                                        <td class="p-6 font-black text-slate-800 w-1/4">NIST CSF</td>
-                                        <td class="p-6"><strong>DE.CM-1 (Detección).</strong> Tráfico no detectado por 76 días por certificado SSL vencido.</td>
-                                        <td class="p-6 italic text-slate-500">Si el SSL estuviera vigente, el IDS habría detectado firmas de Web Shells en horas, no meses.</td>
-                                    </tr>
-                                    <tr class="border-b border-slate-100">
-                                        <td class="p-6 font-black text-slate-800">NIST CSF</td>
-                                        <td class="p-6"><strong>PR.AC-1 (Control Acceso).</strong> Credenciales de bases de datos en texto plano.</td>
-                                        <td class="p-6 italic text-slate-500">Uso de bóveda PAM para impedir el movimiento lateral hacia las bases de datos centrales.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-6 font-black text-slate-800">GDPR</td>
-                                        <td class="p-6"><strong>Art. 32 Seguridad del tratamiento.</strong> Fallo en seudonimización y cifrado de PII.</td>
-                                        <td class="p-6 italic text-slate-500">Cifrado en reposo (Data at Rest) para que la información robada fuera inútil para el atacante.</td>
-                                    </tr>
+                        <!-- Escenario 02 Transcrito -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="cloud-off" class="mr-4 w-8 h-8"></i> Escenario 02: Exposición en la Nube</div>
+                            <table class="content-table w-full">
+                                <thead><tr class="bg-slate-50"><th>Clasificación</th><th>Análisis Forense / Técnico</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="font-bold">Amenaza</td><td>Externa Pasiva: La información fluye al exterior por error interno.</td></tr>
+                                    <tr><td class="font-bold">Terminología</td><td>Exposure (Exposición de datos), Misconfiguration.</td></tr>
+                                    <tr><td class="font-bold">Falla X.800</td><td>Confidencialidad y Control de Acceso (Lectura no autorizada).</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
 
-                    <!-- 8. CONCLUSIONES Y RECOMENDACIONES -->
-                    <div class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <div class="h-12 w-2 bg-blue-600 rounded-full"></div>
-                            <h2 class="text-3xl font-black text-slate-800 uppercase tracking-tight">Conclusiones y Recomendaciones</h2>
-                        </div>
-                        <div class="bg-blue-600 p-10 rounded-[3rem] text-white shadow-xl space-y-6">
-                            <p class="text-xl font-bold italic leading-relaxed">
-                                "El ciberataque a Equifax no fue resultado de hackeo inevitable, sino de negligencia en la gestión básica de seguridad. La madurez operativa es la verdadera defensa."
-                            </p>
-                            <div class="grid md:grid-cols-2 gap-8 text-sm pt-4">
-                                <ul class="space-y-4">
-                                    <li class="flex items-start"><i data-lucide="check-square" class="mr-3 mt-1 shrink-0 text-blue-200"></i> Implementar Inventario Dinámico para eliminar puntos ciegos.</li>
-                                    <li class="flex items-start"><i data-lucide="check-square" class="mr-3 mt-1 shrink-0 text-blue-200"></i> Política de parches obligatoria (24-48h) para CVSS 10.0.</li>
-                                </ul>
-                                <ul class="space-y-4">
-                                    <li class="flex items-start"><i data-lucide="check-square" class="mr-3 mt-1 shrink-0 text-blue-200"></i> Automatización de renovación de certificados SSL/TLS.</li>
-                                    <li class="flex items-start"><i data-lucide="check-square" class="mr-3 mt-1 shrink-0 text-blue-200"></i> Adopción estricta del Principio de Mínimo Privilegio.</li>
-                                </ul>
-                            </div>
+                        <div class="bg-blue-900 text-white p-12 rounded-[3rem] shadow-2xl">
+                            <h2 class="text-2xl font-black mb-6 text-blue-300 uppercase italic">Conclusión de Actividad</h2>
+                            <p class="text-lg italic leading-relaxed opacity-80">"La ciberseguridad es un proceso dinámico. El dominio de los marcos X.800 y RFC 4949 distingue a un técnico de un analista estratégico capaz de proteger infraestructura crítica."</p>
                         </div>
                     </div>
-
-                    <!-- 9. GLOSARIO Y FICHA TÉCNICA CVE -->
-                    <div class="grid md:grid-cols-2 gap-12 pt-12 border-t border-slate-200">
-                        <div class="space-y-6">
-                            <h4 class="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Glosario Técnico: CVE-2017-5638</h4>
-                            <div class="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-4">
-                                <p class="text-sm"><strong>Apache Struts RCE:</strong> Vulnerabilidad de ejecución remota que permite control total de un servidor sin credenciales.</p>
-                                <p class="text-sm"><strong>Modus Operandi:</strong> El atacante inyecta código malicioso en el encabezado HTTP. El servidor lo ejecuta al procesar un error del mismo.</p>
-                                <p class="text-sm"><strong>Impacto Equifax:</strong> Puerta de entrada principal. El parche existía desde marzo pero no fue aplicado en meses.</p>
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <h4 class="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 text-center">Bibliografía Principal</h4>
-                            <div class="prose prose-sm prose-slate max-w-none italic text-slate-500">
-                                <ul class="space-y-3">
-                                    <li>U.S. GAO: Reporte GAO-18-559, "Data Protection: Actions Taken by Equifax and Federal Agencies".</li>
-                                    <li>House of Representatives: "The Equifax Data Breach" Final Report (96 páginas).</li>
-                                    <li>FTC: Documentación sobre acuerdo judicial y sanciones de protección de datos personales.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            `
-        },
-        2: {
-            title: "Actividad 02: Análisis de servicios de seguridad (X.800 y RFC 4949)",
-            date: "27 de Enero de 2026",
-            content: `<div class="py-20 text-center"><p class='italic text-slate-400'>Consultar el documento individual para los 10 escenarios específicos.</p></div>`
-        }
-    };
-
-    /**
-     * GESTIÓN DE NAVEGACIÓN SPA (Single Page Application)
-     * Controla la visibilidad entre la página principal y la vista detallada de artículos.
-     */
-    function showView(view, sectionId = null) {
-        const home = document.getElementById('main-content');
-        const detail = document.getElementById('activity-detail');
-        
-        if (view === 'home') {
-            home.classList.remove('hidden');
-            detail.classList.add('hidden');
-            if (sectionId) {
-                const el = document.getElementById(sectionId);
-                if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+                `
             }
-        } else {
-            home.classList.add('hidden');
-            detail.classList.remove('hidden');
-            window.scrollTo(0, 0);
-        }
-    }
-
-    /**
-     * CARGA DINÁMICA DE ARTÍCULOS TÉCNICOS
-     * Renderiza el contenido del objeto 'activities' con una estructura de lectura profesional.
-     */
-    function viewActivity(id) {
-        const data = activities[id] || { 
-            title: "Contenido Pendiente", 
-            date: "-", 
-            content: "<div class='py-20 text-center'><p class='italic text-slate-400'>El artículo técnico está en fase de redacción.</p></div>" 
         };
-        const container = document.getElementById('activity-content');
-        
-        // Estructura de cabecera dinámica para el artículo técnico
-        container.innerHTML = `
-            <div class="mb-16">
-                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-8">
-                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                    <span>Documentación Técnica - Actividad ${id.toString().padStart(2, '0')}</span>
-                </div>
-                <h1 class="text-4xl md:text-7xl font-black text-slate-900 leading-[1] mb-8 tracking-tighter uppercase">${data.title}</h1>
-                <div class="flex flex-wrap gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest border-y border-slate-100 py-6">
-                    <div class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2 text-blue-500"></i> Entrega: ${data.date}</div>
-                    <div class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2 text-blue-500"></i> Lectura: 20 min</div>
-                    <div class="flex items-center"><i data-lucide="shield" class="w-4 h-4 mr-2 text-blue-500"></i> Seguridad Grado A</div>
-                </div>
-            </div>
+
+        /**
+         * showView: Función para cambiar entre la página de inicio y el detalle del artículo.
+         */
+        function showView(view, sectionId = null) {
+            const home = document.getElementById('main-content');
+            const detail = document.getElementById('activity-detail');
             
-            <div class="article-body">
-                ${data.content}
-            </div>
+            if (view === 'home') {
+                home.classList.remove('hidden');
+                detail.classList.add('hidden');
+                if (sectionId) {
+                    const el = document.getElementById(sectionId);
+                    if (el) window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
+                }
+            } else {
+                home.classList.add('hidden');
+                detail.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
 
-            <div class="mt-24 pt-12 border-t border-slate-100 flex flex-col items-center">
-                <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] mb-12">Fin de la Transcripción Técnica</p>
-                <button onclick="showView('home', 'actividades')" class="group relative px-12 py-5 bg-slate-900 text-white rounded-3xl font-black uppercase tracking-widest text-xs hover:bg-blue-600 transition-all shadow-2xl shadow-blue-900/20">
-                    <span class="flex items-center">
-                        <i data-lucide="arrow-left" class="mr-3 w-5 h-5 group-hover:-translate-x-2 transition-transform"></i> Volver al Directorio
-                    </span>
-                </button>
-            </div>
-        `;
-        
-        showView('detail');
-        lucide.createIcons(); // Reactivar iconos Lucide en el nuevo DOM inyectado
-    }
+        /**
+         * viewActivity: Renderiza dinámicamente el contenido técnico de una actividad.
+         */
+        function viewActivity(id) {
+            const data = activities[id] || { title: "En redacción", date: "-", content: "<p class='italic text-slate-400 py-20 text-center'>El contenido técnico está siendo procesado.</p>" };
+            const container = document.getElementById('activity-content');
+            
+            container.innerHTML = `
+                <div class="mb-16">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-8">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                        <span>Artículo Técnico Digital - Actividad ${id.toString().padStart(2, '0')}</span>
+                    </div>
+                    <h1 class="text-4xl md:text-7xl font-black text-slate-900 leading-[0.9] mb-10 tracking-tighter uppercase italic">${data.title}</h1>
+                    <div class="flex flex-wrap gap-8 text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] border-y border-slate-100 py-8">
+                        <div class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-3 text-blue-600"></i> Entrega: ${data.date}</div>
+                        <div class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-3 text-blue-600"></i> Lectura: 15 min</div>
+                        <div class="flex items-center"><i data-lucide="shield" class="w-4 h-4 mr-3 text-blue-600"></i> Revisión: Aprobada</div>
+                    </div>
+                </div>
+                
+                <div class="article-body">
+                    ${data.content}
+                </div>
 
-    // Inicialización global de iconos al cargar el documento
-    document.addEventListener('DOMContentLoaded', () => {
-        if (typeof lucide !== 'undefined') {
+                <div class="mt-24 pt-12 border-t border-slate-100 flex flex-col items-center">
+                    <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.6em] mb-12 italic">--- Fin del Reporte ---</p>
+                    <button onclick="showView('home', 'actividades')" class="group relative px-12 py-5 bg-slate-950 text-white rounded-[1.5rem] font-black uppercase tracking-widest text-[10px] hover:bg-blue-600 transition-all shadow-2xl">
+                        <span class="flex items-center">
+                            <i data-lucide="arrow-left" class="mr-4 w-5 h-5 group-hover:-translate-x-3 transition-transform"></i> Regresar al Directorio
+                        </span>
+                    </button>
+                </div>
+            `;
+            
+            showView('detail');
             lucide.createIcons();
         }
-    });
-</script>
 
+        // Carga inicial de iconos
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>
-
-
-
