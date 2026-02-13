@@ -19,6 +19,8 @@
         pre { background: #0f172a; color: #f1f5f9; padding: 1.25rem; border-radius: 1rem; overflow-x: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; margin: 1.5rem 0; }
         .prose h2 { color: #1e40af; border-left: 4px solid #1e40af; padding-left: 1rem; margin-top: 2.5rem; margin-bottom: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.025em; }
         .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+        .scenario-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.5rem; padding: 2rem; margin-bottom: 2.5rem; }
+        .scenario-title { color: #1e40af; font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
@@ -37,7 +39,7 @@
                 <a href="javascript:void(0)" onclick="showView('home', 'evidencias')" class="hover:text-blue-600 transition">Evidencias</a>
                 <a href="#contacto" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Contacto</a>
             </div>
-            <div class="md:hidden text-slate-600" onclick="toggleMenu()">
+            <div class="md:hidden text-slate-600">
                 <i data-lucide="menu"></i>
             </div>
         </div>
@@ -100,14 +102,14 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover cursor-pointer" onclick="viewActivity(1)">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block">Actividad 01</span>
-                        <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug">Análisis de un ciberataque real y su impacto empresarial</h3>
-                        <div class="flex items-center text-blue-600 font-bold text-xs uppercase tracking-wider">
-                            Ver artículo completo <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block text-center">Actividad 01</span>
+                        <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug text-center">Análisis de un ciberataque real y su impacto</h3>
+                        <div class="flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-wider">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                         </div>
                     </div>
                     <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover cursor-pointer" onclick="viewActivity(2)">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block">Actividad 02</span>
+                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2 block text-center">Actividad 02</span>
                         <h3 class="text-lg font-bold mb-4 text-slate-800 leading-snug text-center">Análisis de servicios de seguridad (X.800 y RFC 4949)</h3>
                         <div class="flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-wider">
                             Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
@@ -312,32 +314,215 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                `
+            },
+            2: {
+                title: "Actividad 02: Análisis de servicios de seguridad (X.800 y RFC 4949)",
+                date: "27 de Enero de 2026",
+                content: `
+                    <div class="space-y-12">
+                        <!-- Portada Técnica -->
+                        <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 text-center space-y-4">
+                            <h3 class="text-sm font-black uppercase text-blue-700 tracking-tighter">Reporte Individual de Análisis</h3>
+                            <h2 class="text-3xl font-black text-slate-900 leading-none mb-6 underline decoration-blue-600">ANÁLISIS DE SERVICIOS DE SEGURIDAD</h2>
+                            <div class="text-xs font-bold text-slate-500 space-y-1">
+                                <p>PALOMO CERDA JOSE ARMANDO - 175932</p>
+                                <p class="text-blue-600">MSTRO. SERVANDO LOPEZ CUEVAS</p>
+                                <p>Universidad Politécnica de San Luis Potosí</p>
+                                <p>CNO V - SEGURIDAD INFORMÁTICA</p>
+                            </div>
+                        </div>
 
-                        <!-- Glosario y Bibliografía -->
-                        <div class="grid md:grid-cols-2 gap-10 pt-10 border-t border-slate-100">
+                        <div class="space-y-6">
+                            <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Introducción</h2>
+                            <p>En el panorama actual de la ciberseguridad, la sofisticación de las amenazas exige el uso de un lenguaje técnico estandarizado y marcos de referencia robustos. Esta actividad se centra en la aplicación de dos pilares fundamentales: el modelo <strong>ITU-T X.800</strong> y el <strong>RFC 4949</strong>.</p>
+                            <p>A través del análisis de diez escenarios distintos, este trabajo demuestra cómo el uso correcto de esta terminología facilita la identificación de vectores de ataque y la implementación de controles de seguridad efectivos, protegiendo los activos más valiosos de cualquier organización: su información y su continuidad operativa.</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">Análisis de Escenarios Técnicos</h2>
+
+                        <!-- Escenario 01 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="shield-alert" class="mr-2"></i> Escenario 01: Ransomware LockBit</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Compromiso simultáneo de la tríada CIA mediante cifrado y exfiltración de datos.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad (Exfiltración), Integridad (Cifrado), Disponibilidad (Bloqueo).</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Multi-stage attack, Data Breach, Availability Attack, Unauthorized Access.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Explotación de vulnerabilidades/credenciales y movimiento lateral.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Respaldos inmutables (offline), EDR/XDR, Segmentación de red.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 02 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="cloud-off" class="mr-2"></i> Escenario 02: Errores en la Nube</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Exposición de datos por fallas de configuración (Buckets S3 abiertos).</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Control de Acceso.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Exposure, Misconfiguration, Data Leak.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Pasiva. Ausencia de mecanismos de autenticación en servicios Cloud.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Políticas de Menor Privilegio, Auditorías CSPM, Cifrado en reposo.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 03 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="box" class="mr-2"></i> Escenario 03: Supply Chain Attack</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Compromiso de proveedor legítimo de software.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Integridad (Código alterado), Autenticación (Abuso de firma).</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Supply Chain Attack, Malware, Trust Abuse.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Inyección de código en repositorios o servidores de actualización.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Análisis SCA, Verificación de Hashes, Zero Trust, Sandboxing.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 04 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="user-x" class="mr-2"></i> Escenario 04: Credenciales Robadas</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Persistencia mediante phishing y suplantación de identidad.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Autenticación, Control de Acceso, Confidencialidad.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Credential Compromise, Phishing, Masquerade.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Ingeniería Social para captura e inicio de sesión remoto.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>MFA Obligatorio, Análisis de comportamiento (UEBA), Awareness.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 05 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="database-zap" class="mr-2"></i> Escenario 05: Destrucción de Backups</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Eliminación deliberada de respaldos para maximizar el daño.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Disponibilidad, Integridad.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Data Destruction, Availability Attack, Ransomware.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Movimiento lateral hacia consolas de administración de backups.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Estrategia 3-2-1, Respaldos inmutables (WORM), Air-gapped.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 06 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="user-check" class="mr-2"></i> Escenario 06: Insider Threat</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Empleado con acceso legítimo extrayendo y vendiendo información.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Control de Acceso.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Insider Threat, Data Leakage, Privilege Abuse.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Interna Activa. Abuso de privilegios administrativos mediante USB o Cloud.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Mínimo Privilegio (PoLP), DLP (Data Loss Prevention), UAM.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 07 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="file-warning" class="mr-2"></i> Escenario 07: Alteración de Logs</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Borrado de registros para impedir el análisis forense.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Integridad, No Repudio, Autenticación.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Audit Trail, Evidentiary Integrity, Tampering.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Acceso administrativo y uso de Log wipers.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>SIEM Centralizado con escritura Append-only en tiempo real.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 08 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="refresh-ccw" class="mr-2"></i> Escenario 08: Fallo Operacional</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Caída de servicios globales por actualización mal ejecutada.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Disponibilidad.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Operational Failure, Denial of Service (DoS), System Integrity.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Interna Accidental. Error de configuración o bug en despliegue.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Pruebas de Regresión (Staging), Canary Deployments, Rollback Planes.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 09 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="globe-2" class="mr-2"></i> Escenario 09: Sitios Clonados</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Réplicas oficiales para captura fraudulenta de datos.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Autenticación, Confidencialidad.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Masquerade, Phishing, Deception.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Typosquatting y clonación de diseño web.</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>DMARC/SPF/DKIM, Certificados EV, Security Awareness.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Escenario 10 -->
+                        <div class="scenario-card">
+                            <div class="scenario-title"><i data-lucide="bomb" class="mr-2"></i> Escenario 10: Ataque Destructivo</div>
+                            <p class="text-sm text-slate-600 mb-6 italic">Borrado total de sistemas para sabotaje irreversible.</p>
+                            <table class="content-table">
+                                <thead><tr><th>Elemento</th><th>Respuesta Técnica</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>Servicios X.800</b></td><td>Confidencialidad, Integridad, Disponibilidad.</td></tr>
+                                    <tr><td><b>RFC 4949</b></td><td>Destructive Attack, Data Destruction, Intrusion.</td></tr>
+                                    <tr><td><b>Tipo / Vector</b></td><td>Externa Activa. Ejecución de software wiper (sobrescritura MBR).</td></tr>
+                                    <tr><td><b>Medida Control</b></td><td>Segregación de redes crítica, IDS/IPS, Disaster Recovery (Sitios alternos).</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="bg-blue-900 text-white p-10 rounded-[2.5rem] shadow-xl">
+                            <h2 class="text-2xl font-bold mb-6 text-blue-300">Conclusión del Análisis</h2>
+                            <p class="mb-4">La ciberseguridad no es un estado estático, sino un proceso dinámico. La aplicación de la terminología del <strong>RFC 4949</strong> resulta indispensable para cualquier profesional, ya que permite distinguir entre fallas técnicas y conceptuales.</p>
+                            <p class="text-sm text-blue-100 opacity-80 italic">"El dominio de estos marcos normativos es lo que distingue a un técnico de un analista de seguridad estratégico, capaz de proteger la infraestructura crítica."</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8 border-t border-slate-200 pt-10">
                             <div>
-                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest text-center">Ficha Técnica CVE-2017-5638</h4>
-                                <div class="p-4 bg-slate-50 rounded-xl text-xs space-y-2">
-                                    <p><strong>Gravedad:</strong> 10.0 Crítico.</p>
-                                    <p><strong>Definición:</strong> Ejecución remota de código que permite control total del servidor web.</p>
-                                </div>
+                                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Glosario Seleccionado</h4>
+                                <ul class="text-xs space-y-2 text-slate-500">
+                                    <li><strong>Audit Trail:</strong> Registros cronológicos para reconstruir eventos.</li>
+                                    <li><strong>No Repudio:</strong> Impedir que se niegue la autoría de una acción.</li>
+                                    <li><strong>Ataque Pasivo:</strong> Espionaje que no altera recursos.</li>
+                                </ul>
                             </div>
                             <div>
                                 <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest text-center">Bibliografía</h4>
-                                <ul class="text-[10px] text-slate-500 space-y-2">
-                                    <li>• U.S. GAO: Reporte GAO-18-559 (Fallo de visibilidad técnica).</li>
-                                    <li>• House of Representatives: "The Equifax Data Breach" (96 págs).</li>
-                                    <li>• FTC: Sanciones económicas y protección de datos personales.</li>
+                                <ul class="text-[10px] text-slate-400 space-y-1">
+                                    <li>• ITU-T Recommendation X.800 (1991).</li>
+                                    <li>• Shirey, R. Internet Security Glossary (RFC 4949).</li>
+                                    <li>• Engebretson, P. The Basics of Hacking.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 `
             },
-            2: {
-                title: "Actividad 02: Análisis de servicios de seguridad (X.800 y RFC 4949)",
+            3: {
+                title: "Actividad 03: Interpretación y traducción de políticas en iptables",
                 date: "Febrero 2026",
-                content: `<div class="p-10 text-center"><p class='italic text-slate-400'>Artículo en redacción técnica.</p></div>`
+                content: `<div class="p-10 text-center text-slate-400 italic font-medium">Contenido próximamente.</div>`
             },
             // ... resto de actividades se mantienen igual ...
         };
@@ -366,7 +551,7 @@
                 <div class="mb-12">
                     <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest rounded-full mb-4">Actividad ${id.toString().padStart(2, '0')}</span>
                     <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-none mb-4 tracking-tighter">${data.title}</h1>
-                    <p class="text-sm font-bold text-slate-400">Entrega: ${data.date}</p>
+                    <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Fecha de Entrega: ${data.date}</p>
                 </div>
                 <div class="border-t border-slate-100 pt-10">${data.content}</div>
             `;
