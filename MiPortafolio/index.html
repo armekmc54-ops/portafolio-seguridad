@@ -1064,8 +1064,294 @@
                         </div>
                     </div>
                 `
-            }
+            },
+             6: {
+
+                 title: "Proyecto PR02: Diseño Ético de Campaña de Ingeniería Social",
+                content: `
+                    <div class="prose max-w-none">
+                        <div class="bg-blue-900 p-12 rounded-[3rem] text-white text-center mb-16 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-2 bg-blue-400 shadow-xl"></div>
+                            <h3 class="text-xs font-black uppercase text-blue-300 tracking-[0.5em] mb-4">Proyecto PR02</h3>
+                            <h1 class="text-4xl md:text-5xl font-black leading-none uppercase italic underline decoration-blue-500/30">EL ESLABÓN MÁS DÉBIL</h1>
+                            <p class="mt-6 text-blue-200 font-medium italic">Simulación interactiva y comparativa de plataformas de phishing</p>
+                        </div>
+
+                        <h2>1. Investigación: Plataformas de Simulación de Phishing</h2>
+                        <p>Análisis comparativo de soluciones profesionales para el entrenamiento de usuarios.</p>
+                        <div class="overflow-x-auto rounded-3xl border border-slate-200 mb-12">
+                            <table class="content-table w-full mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Plataforma</th>
+                                        <th>Capacidades Técnicas</th>
+                                        <th>Enfoque Ético</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>KnowBe4</b></td>
+                                        <td>Enorme librería de plantillas, test de USB, reporte de botones.</td>
+                                        <td>Basado en cumplimiento y gamificación.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Hoxhunt</b></td>
+                                        <td>Entrenamiento adaptativo basado en IA.</td>
+                                        <td>Refuerzo positivo, sin castigo al usuario.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Proofpoint</b></td>
+                                        <td>Análisis avanzado de amenazas reales para simulación.</td>
+                                        <td>Integración con protección de email real.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Cofense</b></td>
+                                        <td>Detección de phishing por crowdsourcing.</td>
+                                        <td>Enfoque en la resiliencia colectiva.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>2. Phishing Quiz: Simulación Interactiva</h2>
+                        <p class="mb-10 text-slate-500 italic">Prueba tus habilidades identificando vectores de ataque en 10 escenarios realistas.</p>
+                        
+                        <div id="quiz-container" class="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-200 shadow-inner">
+                            <!-- Consent Screen -->
+                            <div id="consent-screen" class="text-center py-10">
+                                <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="shield-alert" class="w-10 h-10"></i></div>
+                                <h3 class="text-2xl font-black mb-4">Consentimiento Informado</h3>
+                                <p class="text-sm text-slate-500 max-w-md mx-auto mb-8 leading-relaxed">Este test es educativo. No recolectamos contraseñas reales. Al continuar, aceptas participar en esta simulación de ingeniería social con fines de aprendizaje.</p>
+                                <button onclick="startQuiz()" class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-blue-700 transition">Entendido, Iniciar Quiz</button>
+                            </div>
+
+                            <!-- Question Template -->
+                            <div id="question-screen" class="hidden">
+                                <div class="flex justify-between items-center mb-8">
+                                    <span id="question-counter" class="text-[10px] font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">Pregunta 1 de 10</span>
+                                    <span id="score-badge" class="text-[10px] font-black text-slate-400 uppercase italic">Puntos: 0</span>
+                                </div>
+                                
+                                <div id="email-preview" class="phishing-email mb-8">
+                                    <div class="email-header">
+                                        <p><strong>De:</strong> <span id="sender-name">Soporte IT</span> &lt;<span id="sender-email">it@servicios-seguros.com</span>&gt;</p>
+                                        <p><strong>Para:</strong> Usuario Corporativo</p>
+                                        <p><strong>Asunto:</strong> <span id="email-subject">Acción Requerida: Tu cuenta ha sido bloqueada</span></p>
+                                    </div>
+                                    <div id="email-body" class="email-body">
+                                        Contenido del email...
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <button onclick="handleAnswer(true)" class="p-4 bg-red-100 text-red-700 rounded-2xl font-black uppercase text-[10px] border-2 border-red-200 hover:bg-red-200 transition">Parece Phishing</button>
+                                    <button onclick="handleAnswer(false)" class="p-4 bg-green-100 text-green-700 rounded-2xl font-black uppercase text-[10px] border-2 border-green-200 hover:bg-green-200 transition">Parece Legítimo</button>
+                                </div>
+                            </div>
+
+                            <!-- Feedback Screen -->
+                            <div id="feedback-screen" class="hidden">
+                                <div id="feedback-status" class="p-6 rounded-2xl mb-6">
+                                    <p id="feedback-msg" class="font-black italic"></p>
+                                </div>
+                                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-sm mb-8">
+                                    <p id="feedback-explanation" class="text-slate-600"></p>
+                                </div>
+                                <button onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[10px]">Continuar</button>
+                            </div>
+
+                            <!-- Results Screen -->
+                            <div id="results-screen" class="hidden text-center">
+                                <h3 class="text-3xl font-black mb-2">Resultado Final</h3>
+                                <div id="final-score" class="text-6xl font-black text-blue-600 mb-6">0%</div>
+                                <div id="score-analysis" class="bg-white p-6 rounded-2xl border border-slate-200 mb-8 text-sm italic text-slate-500"></div>
+                                <button onclick="startQuiz()" class="text-blue-600 font-bold underline text-sm">Reiniciar Simulación</button>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px; margin: 40px 0;">
+                            <a href="175932-PRO2.pdf" class="export-btn" download><i data-lucide="download"></i> Descargar Reporte PR02</a>
+                            <div style="color: #666; font-size: 12px; align-self: center;"><i data-lucide="check-circle" class="mr-1 text-green-500"></i> Actividad validada por ITI-UPSLP</div>
+                        </div>
+                    </div>
+                `
+             }
         };
+
+        // QUIZ LOGIC
+        const scenarios = [
+            {
+                sender: "Microsoft Security",
+                email: "noreply@secure-microsoft.net",
+                subject: "Urgente: Intento de inicio de sesión inusual",
+                body: "Hemos detectado un acceso desde Rusia. Si no fuiste tú, haz clic en el botón para bloquear tu cuenta inmediatamente y validar tu MFA.",
+                isPhishing: true,
+                vector: "Urgencia y Dominio similar (.net)",
+                explanation: "Microsoft usa dominios .com. El sentido de urgencia extrema y el enlace directo son señales clásicas de phishing."
+            },
+            {
+                sender: "Recursos Humanos",
+                email: "rh@miempresa.com",
+                subject: "Recibo de nómina - Enero 2026",
+                body: "Hola Jose, adjuntamos tu recibo de nómina correspondiente al mes actual. Saludos.",
+                isPhishing: false,
+                vector: "Contextual legítimo",
+                explanation: "El dominio es el oficial de la empresa, el lenguaje es neutro y no pide acciones sospechosas ni clics urgentes."
+            },
+            {
+                sender: "Soporte IT",
+                email: "it-support@google-verification.com",
+                subject: "Actualización de espacio en Google Drive",
+                body: "Tu almacenamiento está lleno. Haz clic aquí para obtener 50GB gratis por ser empleado de IT.",
+                isPhishing: true,
+                vector: "Cebo (Beneficio gratis)",
+                explanation: "El dominio google-verification.com no es propiedad de Google. Es un cebo para capturar credenciales de Drive."
+            },
+            {
+                sender: "LinkedIn",
+                email: "messages-noreply@linkedin.com",
+                subject: "Tienes 4 mensajes nuevos esperando",
+                body: "Varios reclutadores han visto tu perfil. Inicia sesión para responder.",
+                isPhishing: false,
+                vector: "Notificación estándar",
+                explanation: "Notificación común de LinkedIn desde su dominio oficial sin adjuntos ni lenguaje amenazante."
+            },
+            {
+                sender: "Netflix",
+                email: "info@mailer.netflix.com",
+                subject: "Tu pago no pudo ser procesado",
+                body: "Tu suscripción ha expirado. Actualiza tus datos de facturación en el siguiente enlace para no perder tus series.",
+                isPhishing: true,
+                vector: "Suplantación de marca",
+                explanation: "Aunque el email parece real, los estafadores suelen clonar estos avisos para robar datos de tarjetas de crédito."
+            },
+            {
+                sender: "Dropbox",
+                email: "no-reply@dropbox.com",
+                subject: "Has compartido un archivo con Armando",
+                body: "Haga clic aquí para ver el documento compartido: 'nomina_confidencial.zip'",
+                isPhishing: true,
+                vector: "Archivo adjunto sospechoso",
+                explanation: "Archivos .zip o .exe compartidos inesperadamente son vectores comunes de malware."
+            },
+            {
+                sender: "Administración",
+                email: "admin@upslp.edu.mx",
+                subject: "Recordatorio de cambio de contraseña semestral",
+                body: "Estimado alumno, por políticas de seguridad interna, debe renovar su contraseña en el portal oficial de la universidad (SIAE).",
+                isPhishing: false,
+                vector: "Política legítima",
+                explanation: "Proviene del dominio institucional y redirige al portal conocido por los alumnos."
+            },
+            {
+                sender: "Amazon Support",
+                email: "order-update@amazon-global.co",
+                subject: "Problema con tu pedido #405-3921",
+                body: "Tu paquete no pudo ser entregado. Descarga la etiqueta adjunta para recogerlo en oficina.",
+                isPhishing: true,
+                vector: "Typosquatting (.co en vez de .com)",
+                explanation: "Amazon rara vez envía etiquetas de descarga. El dominio .co es un truco de typosquatting."
+            },
+            {
+                sender: "Google Workspace",
+                email: "alert-noreply@google.com",
+                subject: "Nueva App tiene acceso a tu cuenta",
+                body: "La aplicación 'Third-Party Analytics' ha obtenido acceso a tus correos. Si no fuiste tú, revoca el acceso ahora.",
+                isPhishing: false,
+                vector: "Alerta de seguridad real",
+                explanation: "Es una notificación de seguridad estándar que utiliza el dominio raíz de Google."
+            },
+            {
+                sender: "SAT México",
+                email: "contacto@sat-gob-mx.info",
+                subject: "Tienes un saldo a favor de $12,400 MXN",
+                body: "Para depositar tu devolución, ingresa tu CLABE interbancaria en el portal de validación.",
+                isPhishing: true,
+                vector: "Engaño financiero",
+                explanation: "El SAT usa dominios .gob.mx. El dominio .info es fraudulento para capturar datos bancarios."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function startQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('consent-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('question-screen').classList.remove('hidden');
+            updateQuestion();
+        }
+
+        function updateQuestion() {
+            const q = scenarios[currentQuestion];
+            document.getElementById('question-counter').innerText = `Escenario ${currentQuestion + 1} de 10`;
+            document.getElementById('sender-name').innerText = q.sender;
+            document.getElementById('sender-email').innerText = q.email;
+            document.getElementById('email-subject').innerText = q.subject;
+            document.getElementById('email-body').innerText = q.body;
+            document.getElementById('score-badge').innerText = `Puntos: ${score}`;
+        }
+
+        function handleAnswer(userSaysPhishing) {
+            const q = scenarios[currentQuestion];
+            const isCorrect = userSaysPhishing === q.isPhishing;
+            
+            if (isCorrect) score += 10;
+
+            const statusBox = document.getElementById('feedback-status');
+            statusBox.className = isCorrect ? 'p-6 rounded-2xl mb-6 feedback-correct' : 'p-6 rounded-2xl mb-6 feedback-incorrect';
+            document.getElementById('feedback-msg').innerText = isCorrect ? '¡Correcto!' : 'Incorrecto';
+            document.getElementById('feedback-explanation').innerHTML = `<strong>Análisis técnico:</strong> ${q.explanation}<br><br><strong>Vector:</strong> ${q.vector}`;
+            
+            document.getElementById('question-screen').classList.add('hidden');
+            document.getElementById('feedback-screen').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            document.getElementById('feedback-screen').classList.add('hidden');
+            if (currentQuestion < scenarios.length) {
+                document.getElementById('question-screen').classList.remove('hidden');
+                updateQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('results-screen').classList.remove('hidden');
+            document.getElementById('final-score').innerText = `${score}%`;
+            
+            let analysis = "";
+            if (score === 100) analysis = "Excelente: Eres un experto en detectar ingeniería social. Tu nivel de riesgo humano es mínimo.";
+            else if (score >= 70) analysis = "Bueno: Identificas la mayoría de los ataques, pero debes prestar más atención a los detalles de los dominios.";
+            else analysis = "Crítico: Eres vulnerable a ataques de phishing. Se recomienda capacitación urgente en higiene digital.";
+            
+            document.getElementById('score-analysis').innerText = analysis;
+        }
+
+        function showView(view) {
+            document.getElementById('main-content').classList.toggle('hidden', view === 'detail');
+            document.getElementById('activity-detail').classList.toggle('hidden', view === 'home');
+            window.scrollTo(0,0);
+        }
+
+        function viewActivity(id) {
+            const container = document.getElementById('activity-content');
+            container.innerHTML = activities[id].content;
+            showView('detail');
+            lucide.createIcons();
+            // Reset quiz scroll if it was open
+            if(id === 6) {
+                document.getElementById('consent-screen').classList.remove('hidden');
+                document.getElementById('question-screen').classList.add('hidden');
+                document.getElementById('results-screen').classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); });
 
         /**
          * showView: Gestiona la navegación SPA
@@ -1136,6 +1422,7 @@
     </script>
 </body>
 </html>
+
 
 
 
