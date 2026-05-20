@@ -42,6 +42,7 @@
                 <a href="javascript:void(0)" onclick="showView('home', 'inicio')" class="hover:text-blue-600 transition">Inicio</a>
                 <a href="javascript:void(0)" onclick="showView('home', 'perfil')" class="hover:text-blue-600 transition">Perfil</a>
                 <a href="javascript:void(0)" onclick="showView('home', 'actividades')" class="text-blue-600 border-b-2 border-blue-600 pb-1">Actividades</a>
+                <a href="javascript:void(0)" onclick="showView('home', 'certificaciones')" class="hover:text-blue-600 transition">Certificaciones</a>
                 <a href="javascript:void(0)" onclick="showView('home', 'evidencias')" class="hover:text-blue-600 transition">Evidencias</a>
                 <a href="#contacto" class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-lg">Contacto</a>
             </div>
@@ -157,6 +158,93 @@
                         <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Actividades 03-06 Próximamente</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CERTIFICACIONES -->
+        <section id="certificaciones" class="py-24 px-6 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black tracking-tight uppercase">Certificaciones</h2>
+                    <p class="text-slate-400 font-bold text-xs mt-2 tracking-[0.4em] uppercase">Cisco Networking Academy</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(1)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Introducción a la Ciberseguridad</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(2)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="network" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Conceptos básicos de redes</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(3)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="server" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Dispositivos de red y configuración inicial</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(4)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="laptop-2" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Seguridad de Terminales</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(5)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="crosshair" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Administración de Amenazas Cibernéticas</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(6)">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100">
+                            <i data-lucide="briefcase" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Carrera de Analista Junior en Ciberseguridad</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm card-hover flex flex-col cursor-pointer" onclick="viewCertification(7)">
+                        <div class="w-14 h-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-6 border border-slate-800">
+                            <i data-lucide="terminal" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-black mb-4 text-slate-800 leading-tight italic">Hacker Ético</h3>
+                        <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cisco NetAcad</span>
+                            <div class="flex items-center text-blue-600 font-black text-[10px] uppercase">Ver detalle <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></div>
+                        </div>
+                    </div>  
             </div>
         </section>
 
@@ -1186,6 +1274,468 @@
              }
         };
 
+        // OBJETO DE CERTIFICACIONES
+        const certifications = {
+            1: {
+                title: "Introducción a la Ciberseguridad",
+        date: "Acreditado",
+        content: `
+            <div class="prose max-w-none text-left">
+                <div class="bg-blue-900 p-16 rounded-[4rem] border-2 border-blue-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                    <div class="absolute top-0 left-0 w-full h-3 bg-blue-500"></div>
+                    <h3 class="text-[11px] font-black uppercase text-blue-400 tracking-[0.6em]">Cisco Networking Academy</h3>
+                    <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-500/50 decoration-8 underline-offset-[12px]">Introducción a la Ciberseguridad</h1>
+                    <p class="text-blue-200 font-medium italic mt-6">Fundamentos del panorama de amenazas y la protección de datos en el entorno digital.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Comprensión de las amenazas cibernéticas modernas.</li>
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Identificación de vulnerabilidades en redes corporativas.</li>
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Principios de confidencialidad, integridad y disponibilidad (CIA).</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                    <p class="text-slate-700 leading-8 text-justify">
+                        La certificación Introducción a la Ciberseguridad de Cisco Networking Academy representa una base sólida para comprender el panorama actual de amenazas digitales y la importancia estratégica de la seguridad informática en organizaciones modernas. Durante este proceso formativo se desarrollaron conocimientos esenciales sobre la protección de la información, la identificación de riesgos y el impacto que los ataques cibernéticos pueden generar en empresas, instituciones gubernamentales y usuarios individuales. Además, se fortaleció la comprensión de conceptos fundamentales como la confidencialidad, integridad y disponibilidad de los datos, pilares clave dentro de cualquier arquitectura de seguridad.
+
+                        Esta certificación también permitió analizar el funcionamiento de amenazas como malware, ransomware, phishing, ataques de ingeniería social y vulnerabilidades explotadas en redes empresariales. A través de diferentes actividades prácticas y escenarios simulados, se adquirieron habilidades orientadas a la detección de riesgos, implementación de medidas preventivas y aplicación de buenas prácticas de seguridad. Asimismo, se abordó la importancia del monitoreo constante, las políticas de acceso y la concientización de los usuarios como parte fundamental de una estrategia de defensa integral.
+
+                        Otro aspecto relevante fue la introducción a los distintos roles profesionales dentro del área de ciberseguridad, incluyendo analistas SOC, especialistas en respuesta a incidentes y administradores de seguridad. Esto permitió comprender cómo la ciberseguridad se integra en los procesos operativos y estratégicos de las organizaciones. La certificación no solo proporcionó conocimientos técnicos, sino también una visión ética y profesional sobre la responsabilidad de proteger activos digitales críticos en un entorno altamente conectado y en constante evolución tecnológica.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/925e02d0-caa3-4282-a784-6be97e6c4704" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Introduction_to_Cybersecurity_certificate_175932-upslp-edu-mx_b4fb9bc9-9867-44ee-a081-b082a918e109.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            2: {
+                title: "Conceptos básicos de redes",
+        date: "Acreditado",
+        content: `
+            <div class="prose max-w-none text-left">
+                <div class="bg-blue-900 p-16 rounded-[4rem] border-2 border-blue-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                    <div class="absolute top-0 left-0 w-full h-3 bg-blue-500"></div>
+                    <h3 class="text-[11px] font-black uppercase text-blue-400 tracking-[0.6em]">Cisco Networking Academy</h3>
+                    <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-500/50 decoration-8 underline-offset-[12px]">Conceptos básicos de redes</h1>
+                    <p class="text-blue-200 font-medium italic mt-6">Arquitectura, componentes y funcionamiento de las redes de datos modernas.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Modelo OSI y TCP/IP en la comunicación de datos.</li>
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Diseño lógico y direccionamiento IPv4 / IPv6.</li>
+                        <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Resolución de problemas en la capa física y de enlace de datos.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                    <p class="text-slate-700 leading-8 text-justify">
+                        La certificación Conceptos Básicos de Redes de Cisco Networking Academy permitió desarrollar una comprensión integral sobre la arquitectura, funcionamiento y administración de redes modernas utilizadas en entornos empresariales y tecnológicos. A lo largo de esta formación se abordaron los principios fundamentales de comunicación de datos, incluyendo el modelo OSI, la pila TCP/IP y los protocolos esenciales que permiten la interconectividad entre dispositivos y sistemas distribuidos.
+
+                        Durante el curso se adquirieron conocimientos relacionados con direccionamiento IPv4 e IPv6, subneteo, segmentación de redes y transmisión de paquetes de datos. Estas competencias son fundamentales para diseñar infraestructuras de red eficientes, seguras y escalables. Asimismo, se fortaleció la capacidad para identificar problemas de conectividad y realizar diagnósticos básicos sobre fallas en la capa física, enlace y red, utilizando herramientas y metodologías de troubleshooting ampliamente implementadas en el ámbito profesional.
+
+                        La certificación también profundizó en el análisis de dispositivos de red como switches, routers y puntos de acceso, permitiendo comprender el papel que desempeñan dentro de una infraestructura tecnológica. De igual manera, se estudiaron conceptos relacionados con topologías de red, medios de transmisión, redes LAN y WAN, así como servicios de conectividad modernos utilizados en organizaciones de diferentes tamaños.
+
+                        Gracias a esta experiencia académica y práctica, se consolidó una base técnica sólida para continuar desarrollando habilidades en áreas avanzadas de redes y ciberseguridad. Además, se fortaleció la capacidad de adaptación a entornos tecnológicos dinámicos, comprendiendo la importancia de la conectividad y la comunicación segura dentro de los procesos operativos y estratégicos de cualquier organización moderna.
+                    </p>
+                </div>
+            </div>
+             <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/907ea62e-d5b5-4ae0-a497-cbdcf14b7649" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Networking_Basics_certificate_175932-upslp-edu-mx_a71c0568-ab86-4108-a60b-93ef6ee9b439.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            3: {
+                title: "Dispositivos de red y configuración inicial",
+                date: "Acreditado",
+                content: `
+        <div class="prose max-w-none text-left">
+            <div class="bg-blue-900 p-16 rounded-[4rem] border-2 border-blue-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                <div class="absolute top-0 left-0 w-full h-3 bg-blue-500"></div>
+                <h3 class="text-[11px] font-black uppercase text-blue-400 tracking-[0.6em]">Cisco Networking Academy</h3>
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-500/50 decoration-8 underline-offset-[12px]">Dispositivos y Configuración</h1>
+                <p class="text-blue-200 font-medium italic mt-6">Administración de Cisco IOS, switches y enrutadores perimetrales.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                <ul class="space-y-4 text-slate-600 font-medium">
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Configuración inicial de switches y routers Cisco mediante CLI.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Aseguramiento de accesos administrativos y contraseñas.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Implementación de enrutamiento estático y predeterminado.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                <p class="text-slate-700 leading-8 text-justify">
+                    La certificación Dispositivos de Red y Configuración Inicial de Cisco Networking Academy permitió adquirir conocimientos fundamentales relacionados con la implementación, configuración y administración de dispositivos de red utilizados en infraestructuras empresariales modernas. A través de esta formación se desarrollaron habilidades prácticas orientadas al manejo de switches y routers Cisco, comprendiendo su funcionamiento dentro de redes LAN y WAN, así como su papel en la transmisión eficiente y segura de la información.
+
+                    Durante el curso se trabajó con la interfaz de línea de comandos (CLI) de Cisco IOS, aprendiendo procedimientos esenciales para la configuración inicial de dispositivos, asignación de direcciones IP, establecimiento de nombres de host, configuración de contraseñas y protección de accesos administrativos. Asimismo, se fortaleció la comprensión de conceptos relacionados con el enrutamiento estático, tablas de enrutamiento y conectividad entre diferentes segmentos de red, permitiendo construir y administrar topologías funcionales en entornos simulados y prácticos.
+
+                    Otro aspecto importante fue el aprendizaje de buenas prácticas de seguridad aplicadas a dispositivos de red, incluyendo el aseguramiento de puertos, políticas básicas de acceso y protección de configuraciones críticas. Estas habilidades son fundamentales para reducir vulnerabilidades y garantizar la estabilidad operativa de la infraestructura tecnológica dentro de organizaciones modernas.
+
+                    La certificación también permitió desarrollar capacidades de análisis y resolución de problemas relacionados con conectividad y configuración, utilizando comandos de diagnóstico y monitoreo ampliamente empleados en entornos profesionales. Gracias a esta experiencia formativa, se consolidó una base sólida para continuar especializándose en administración de redes, ciberseguridad y tecnologías de infraestructura empresarial, fortaleciendo competencias técnicas altamente demandadas en el sector tecnológico actual.
+                </p>
+            </div>
+        </div>
+         <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/ecf8d286-f475-4a6f-9ec7-16aa91769dd5" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Networking_Devices_and_Initial_Configuration_certificate_175932-upslp-edu-mx_05dac028-7b85-451e-867b-85196284e56d.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            4: {
+                title: "Seguridad de Terminales",
+    date: "Acreditado",
+    content: `
+        <div class="prose max-w-none text-left">
+            <div class="bg-blue-900 p-16 rounded-[4rem] border-2 border-blue-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                <div class="absolute top-0 left-0 w-full h-3 bg-blue-500"></div>
+                <h3 class="text-[11px] font-black uppercase text-blue-400 tracking-[0.6em]">Cisco Networking Academy</h3>
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-500/50 decoration-8 underline-offset-[12px]">Seguridad de Terminales</h1>
+                <p class="text-blue-200 font-medium italic mt-6">Protección de endpoints, sistemas operativos y control de acceso.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                <ul class="space-y-4 text-slate-600 font-medium">
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Mitigación de malware y políticas de defensa en profundidad (Defense-in-Depth).</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Hardening de sistemas operativos Windows y Linux.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Análisis de vulnerabilidades y despliegue de parches.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                <p class="text-slate-700 leading-8 text-justify">
+                    La certificación Seguridad de Terminales de Cisco Networking Academy permitió desarrollar conocimientos especializados sobre la protección de dispositivos finales y sistemas operativos dentro de entornos corporativos y organizacionales. A través de esta formación se comprendió la importancia de asegurar endpoints como computadoras, laptops y servidores, los cuales representan uno de los principales objetivos para actores maliciosos debido a la gran cantidad de información sensible que procesan diariamente.
+
+                    Durante el curso se analizaron diferentes tipos de amenazas dirigidas a terminales, incluyendo malware, ransomware, spyware y ataques basados en vulnerabilidades del sistema operativo. Asimismo, se abordaron metodologías de defensa en profundidad orientadas a fortalecer múltiples capas de seguridad para reducir el impacto de incidentes cibernéticos. Estas prácticas permitieron comprender cómo implementar controles preventivos, detectivos y correctivos dentro de una estrategia integral de protección tecnológica.
+
+                    Otro aspecto fundamental fue el aprendizaje de técnicas de hardening en sistemas Windows y Linux, aplicando configuraciones seguras, control de permisos, políticas de acceso y mecanismos de autenticación robusta. Además, se fortalecieron habilidades relacionadas con la administración de actualizaciones, gestión de parches y análisis de vulnerabilidades, elementos esenciales para mantener la integridad y disponibilidad de los sistemas en operación.
+
+                    La certificación también destacó la relevancia del monitoreo constante y la respuesta temprana ante incidentes relacionados con dispositivos comprometidos. Gracias a esta experiencia formativa, se desarrolló una visión más completa sobre la seguridad de endpoints y la importancia de implementar políticas efectivas para proteger activos críticos dentro de infraestructuras empresariales modernas. Estas competencias representan una base sólida para desempeñarse en áreas de soporte, administración de sistemas y ciberseguridad operativa.
+                </p>
+            </div>
+        </div>
+        <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/4a865549-123e-46c6-be46-d35aacc91bb0" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Endpoint_Security_certificate_175932-upslp-edu-mx_cbce43f9-d547-4a4a-beab-23deeeac61e0.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            5: {
+                title: "Administración de Amenazas Cibernéticas",
+                date: "Acreditado",
+                content: `
+        <div class="prose max-w-none text-left">
+            <div class="bg-blue-900 p-16 rounded-[4rem] border-2 border-blue-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                <div class="absolute top-0 left-0 w-full h-3 bg-blue-500"></div>
+                <h3 class="text-[11px] font-black uppercase text-blue-400 tracking-[0.6em]">Cisco Networking Academy</h3>
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-500/50 decoration-8 underline-offset-[12px]">Admin. de Amenazas Cibernéticas</h1>
+                <p class="text-blue-200 font-medium italic mt-6">Inteligencia de amenazas, monitoreo de redes y respuesta a incidentes.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                <ul class="space-y-4 text-slate-600 font-medium">
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Gestión de eventos de seguridad (SIEM) y análisis de logs.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Metodologías de Cyber Kill Chain y MITRE ATT&CK.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Protocolos de contención y erradicación post-incidente.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-blue-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                <p class="text-slate-700 leading-8 text-justify">
+                    La certificación Administración de Amenazas Cibernéticas de Cisco Networking Academy permitió desarrollar habilidades orientadas a la identificación, análisis y gestión de amenazas dentro de entornos digitales modernos. A través de esta formación se comprendió cómo operan los ataques cibernéticos actuales y la importancia de implementar estrategias de monitoreo continuo para detectar comportamientos anómalos y responder de manera eficiente ante incidentes de seguridad.
+
+                    Durante el curso se trabajó con conceptos relacionados con inteligencia de amenazas, análisis de indicadores de compromiso y gestión de eventos mediante plataformas SIEM. Estas herramientas permiten centralizar y correlacionar registros provenientes de múltiples dispositivos y sistemas, facilitando la detección temprana de actividades sospechosas dentro de una infraestructura tecnológica. Asimismo, se fortalecieron competencias relacionadas con el análisis de logs y la interpretación de alertas generadas por sistemas de seguridad.
+
+                    Otro aspecto relevante fue el estudio de metodologías reconocidas internacionalmente como Cyber Kill Chain y MITRE ATT&CK, utilizadas para comprender las diferentes etapas de un ataque y las tácticas empleadas por actores maliciosos. Esto permitió adquirir una visión más estratégica sobre el comportamiento de amenazas avanzadas y la manera en que las organizaciones pueden fortalecer sus mecanismos de defensa y respuesta.
+
+                    Además, se desarrollaron conocimientos sobre procedimientos de contención, erradicación y recuperación ante incidentes, comprendiendo la importancia de actuar rápidamente para minimizar impactos operativos y financieros. Gracias a esta certificación, se fortaleció la capacidad de análisis en operaciones de ciberseguridad y monitoreo de redes, consolidando competencias esenciales para desempeñarse en equipos SOC y áreas relacionadas con la protección de infraestructuras críticas y activos digitales empresariales.
+                </p>
+            </div>
+        </div>
+        <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/be5ed7f8-9b6d-44b4-afff-561279d8639b" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Cyber_Threat_Management_certificate_175932-upslp-edu-mx_116ad849-ed0d-4699-b972-bb666f754f31.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            6: {
+            title: "Analista Junior en Ciberseguridad",
+            date: "Acreditado",
+            content: `
+        <div class="prose max-w-none text-left">
+            <div class="bg-slate-900 p-16 rounded-[4rem] border-2 border-slate-800 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                <div class="absolute top-0 left-0 w-full h-3 bg-blue-600"></div>
+                <h3 class="text-[11px] font-black uppercase text-slate-400 tracking-[0.6em]">Cisco Networking Academy | Trayectoria</h3>
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-blue-600/50 decoration-8 underline-offset-[12px]">Analista Junior en Ciberseguridad</h1>
+                <p class="text-slate-300 font-medium italic mt-6">Certificación integradora para operaciones en Centros de Operaciones de Seguridad (SOC).</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-slate-900 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                <ul class="space-y-4 text-slate-600 font-medium">
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Triage de alertas y escalamiento de incidentes en entornos de nivel empresarial.</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Uso avanzado de herramientas forenses de red (Wireshark, tcpdump).</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Análisis y correlación de alertas mediante inteligencia contra amenazas.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-slate-900 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                <p class="text-slate-700 leading-8 text-justify">
+                    La certificación Analista Junior en Ciberseguridad de Cisco Networking Academy representa una formación integral enfocada en las operaciones de seguridad y monitoreo dentro de Centros de Operaciones de Seguridad (SOC). A través de este programa se desarrollaron habilidades orientadas a la detección, análisis y respuesta ante incidentes cibernéticos en entornos empresariales, fortaleciendo competencias técnicas esenciales para desempeñarse en equipos de seguridad modernos.
+
+                    Durante el proceso formativo se trabajó con herramientas y metodologías utilizadas en operaciones reales de ciberseguridad, incluyendo análisis de tráfico de red, monitoreo de eventos, correlación de alertas y clasificación de incidentes. Asimismo, se fortalecieron conocimientos relacionados con la identificación de indicadores de compromiso, análisis de amenazas y aplicación de procedimientos de respuesta ante actividades maliciosas detectadas en infraestructuras tecnológicas.
+
+                    Otro aspecto relevante fue el uso de herramientas de análisis forense y monitoreo como Wireshark y tcpdump, permitiendo inspeccionar paquetes de red y detectar comportamientos anómalos dentro de comunicaciones empresariales. Además, se adquirieron conocimientos sobre inteligencia contra amenazas y metodologías de investigación utilizadas para comprender tácticas, técnicas y procedimientos empleados por actores maliciosos en ataques reales.
+
+                    La certificación también permitió desarrollar habilidades relacionadas con el triage de alertas y el escalamiento de incidentes críticos, comprendiendo la importancia de actuar de manera rápida y estructurada para minimizar impactos operativos y financieros. Gracias a esta experiencia académica y práctica, se consolidó una visión integral sobre las operaciones de seguridad defensiva, fortaleciendo capacidades analíticas, técnicas y estratégicas altamente valoradas en el sector de la ciberseguridad profesional y en entornos corporativos de alta demanda tecnológica.
+                </p>
+            </div>
+        </div>
+        <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/c418cf87-10aa-4d8d-be72-831eb42c64c3" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Junior_Cybersecurity_Analyst_Career_Path_certificate_175932-upslp-edu-mx_e5d5a945-dfcc-4637-a34d-2faedf7eab38.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            },
+            7: {
+            title: "Hacker Ético",
+            date: "Acreditado",
+            content: `
+        <div class="prose max-w-none text-left">
+            <div class="bg-slate-950 p-16 rounded-[4rem] border-2 border-red-900/30 text-center space-y-8 shadow-2xl relative overflow-hidden mb-16 italic">
+                <div class="absolute top-0 left-0 w-full h-3 bg-red-600"></div>
+                <h3 class="text-[11px] font-black uppercase text-red-500 tracking-[0.6em]">Cisco Networking Academy | Ofensiva</h3>
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase underline decoration-red-600/50 decoration-8 underline-offset-[12px]">Hacker Ético</h1>
+                <p class="text-slate-400 font-medium italic mt-6">Evaluación proactiva, pruebas de penetración y explotación controlada de vulnerabilidades.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mb-12">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-red-600 pl-6 uppercase tracking-tight mb-6">Competencias Adquiridas</h2>
+                <ul class="space-y-4 text-slate-600 font-medium">
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Ejecución de fases de pentesting (Reconocimiento, Escaneo, Explotación, Post-explotación).</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Identificación de fallos en aplicaciones web (OWASP Top 10).</li>
+                    <li><i data-lucide="check-circle" class="w-5 h-5 text-green-500 inline mr-2"></i> Generación de reportes técnicos y remediación estratégica para clientes ejecutivos.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-black text-slate-800 border-l-8 border-red-600 pl-6 uppercase tracking-tight mb-6">Reseña Profesional</h2>
+                <p class="text-slate-700 leading-8 text-justify">
+                    La certificación Hacker Ético de Cisco Networking Academy permitió desarrollar conocimientos avanzados relacionados con pruebas de penetración, evaluación de vulnerabilidades y análisis ofensivo de seguridad informática. A través de esta formación se comprendieron las metodologías utilizadas por especialistas en seguridad para identificar debilidades dentro de sistemas, aplicaciones y redes, siempre bajo principios éticos y dentro de entornos controlados autorizados.
+
+                    Durante el curso se trabajó con las diferentes fases de un proceso de pentesting, incluyendo reconocimiento, escaneo, enumeración, explotación y post-explotación. Estas actividades permitieron comprender cómo los atacantes pueden aprovechar configuraciones inseguras o vulnerabilidades para comprometer sistemas críticos. Asimismo, se fortalecieron habilidades relacionadas con la recopilación de información, análisis de superficies de ataque y utilización de herramientas especializadas para pruebas de seguridad.
+
+                    Otro aspecto importante fue el estudio de vulnerabilidades presentes en aplicaciones web, especialmente aquellas incluidas dentro del OWASP Top 10, como inyecciones SQL, fallos de autenticación y configuraciones inseguras. Esto permitió comprender la importancia de implementar prácticas de desarrollo seguro y mecanismos de protección adecuados para reducir riesgos dentro de plataformas digitales modernas.
+
+                    La certificación también destacó la relevancia de la documentación técnica y la generación de reportes profesionales orientados a clientes y organizaciones. Se desarrollaron competencias para comunicar hallazgos de manera clara, priorizar riesgos y proponer estrategias de remediación alineadas con las necesidades operativas y de seguridad empresarial.
+
+                    Gracias a esta experiencia académica y práctica, se fortaleció una visión integral sobre la seguridad ofensiva y la importancia de realizar evaluaciones proactivas para anticipar amenazas reales. Estas competencias representan una base sólida para continuar especializándose en pentesting, análisis de vulnerabilidades y auditorías de seguridad informática dentro de entornos profesionales altamente demandantes.
+                </p>
+            </div>
+        </div>
+         <div class="bg-white p-10 rounded-3xl border border-slate-200 shadow-sm mt-12">
+    <h2 class="text-2xl font-black text-slate-800 border-l-8 border-purple-500 pl-6 uppercase tracking-tight mb-6">
+        Badge Digital y Certificación
+    </h2>
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-6">
+        <a 
+            href="https://www.credly.com/badges/6ccd82cf-1813-427b-8316-665a84d5f83b" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+        >
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            Ver Insignia Digital
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+        <a 
+            href="Ethical_Hacker_certificate_175932-upslp-edu-mx_408d2c40-b885-4624-9011-361573cf5688.pdf"
+            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl shadow-lg"
+            download
+        >
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Descargar Certificado PDF
+        </a>
+    </div>
+</div>
+                `
+            }
+        };
+
+        /**
+         * viewCertification: Carga dinámica del detalle de la certificación
+         */
+        function viewCertification(id) {
+            const data = certifications[id];
+            if (!data) return;
+            
+            const container = document.getElementById('activity-content');
+            
+            container.innerHTML = `
+                <div class="mb-16 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-[10px] font-black uppercase tracking-widest mb-8">
+                        <i data-lucide="award" class="w-4 h-4 text-blue-600"></i>
+                        <span>Credencial Académica - Cisco NetAcad</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-10 text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] border-b-2 border-slate-100 pb-8 mt-4">
+                        <div class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-3 text-green-500"></i> Estado: ${data.date}</div>
+                        <div class="flex items-center"><i data-lucide="shield" class="w-4 h-4 mr-3 text-blue-600"></i> Emisor: Cisco Networking Academy</div>
+                    </div>
+                </div>
+                
+                <div class="article-body">
+                    ${data.content}
+                </div>
+
+                <div class="mt-20 pt-16 border-t-4 border-slate-900 border-double flex flex-col items-center">
+                    <button onclick="showView('home', 'certificaciones')" class="group relative px-16 py-6 bg-slate-950 text-white rounded-[2rem] font-black uppercase tracking-[0.5em] text-[10px] hover:bg-blue-600 transition-all shadow-2xl hover:shadow-blue-600/40">
+                        <span class="flex items-center">
+                            <i data-lucide="arrow-left" class="mr-4 w-6 h-6 group-hover:-translate-x-4 transition-transform duration-500"></i> Volver a Certificaciones
+                        </span>
+                    </button>
+                </div>
+            `;
+            
+            showView('detail');
+            lucide.createIcons();
+        }
+
         // QUIZ LOGIC
         const scenarios = [
             {
@@ -1430,7 +1980,6 @@
     </script>
 </body>
 </html>
-
 
 
 
